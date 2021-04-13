@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<meta charset="utf-8">
+<title>Ways Of Listening (work in progress)</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js" ></script>
+<link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css" />
+<script src="https://cdn.plyr.io/3.5.6/plyr.js"></script>
+ <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          const player = Plyr.setup('.js-player');
+      });
+</script> 
+    <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+</style>
+    
+    <style>
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+
+    /* The navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+    left: 50%;
+  width: 50%; /* Full width */
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+    font-family: sans-serif;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+/* Main content */
+.main {
+  margin-top: 30px; /* Add a top margin to avoid content overlay */
+}
+    
+
+    
+    </style>
+
+</head>
+<body>
+<style>
+#map {
+position: fixed;
+width: 50%;
+}
+#features {
+width: 50%;
+margin-left: 50%;
+font-family: sans-serif;
+overflow-y: scroll;
+background-color: #fafafa;
+}
+section {
+padding: 200px 50px;
+line-height: 25px;
+border-bottom: 1px solid #ddd;
+opacity: 0.25;
+font-size: 13px;
+}
+section.active {
+opacity: 1;
+}
+section:last-child {
+border-bottom: none;
+margin-bottom: 200px;
+}
+    .mapboxgl-popup {
+max-width: 800px;
+font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    
+}
+    
+
+</style>
+  <body>
+
+      
+      
+      <div class="navbar">
+  <a href="#home">Konzept</a>
+  <a href="#news">Sound Installation</a>
+  <a href="#contact">Zurück</a> 
+        
+</div>
+
+    <div id='map'></div>
+      
+      <div id="features">
+          <section id="start" class="active">
+<h3>Ways Of Listening (work in progress)</h3>
+<p>
+As part of my bachelor thesis, I am going on acoustic expeditions in the Leipzig area. The focus of my perception shifts and leads me to places unknown to me. The new perspective gained from this is to be presented on this page. <br>
+</section>
+          
+          
+          
+<section id="meißner">
+<h3>Meißner Straße</h3>
+<p>
+November 1895. London is shrouded in fog and Sherlock Holmes and
+Watson pass time restlessly awaiting a new case. "The London
+criminal is certainly a dull fellow," Sherlock bemoans. "There have
+been numerous petty thefts," Watson offers in response. Just then a
+telegram arrives from Sherlock's brother Mycroft with a mysterious
+case.</p> <br>
+    <img id="myImg" src="/Users/AmSho/Desktop/kupäd/Bachelor/Mapbox/Grafik/IMG_0032.jpg" alt="Snow" style="width:100%;max-width:300px">
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+    
+    
+</section>
+<section id="east">
+<h3>East Park</h3>
+<p>
+Arthur Cadogan West was found dead, head crushed in on train tracks
+at Aldgate Station at 6AM Tuesday morning. West worked at Woolwich
+Arsenal on the Bruce-Partington submarine, a secret military
+project. Plans for the submarine had been stolen and seven of the
+ten missing papers were found in West's possession. Mycroft implores
+Sherlock to take the case and recover the three missing papers.
+ </p> <br>  <img id="myImg" src="/Users/AmSho/Desktop/kupäd/Bachelor/Mapbox/Grafik/IMG_0087.jpg" alt="Snow" style="width:100%;max-width:300px">
+<br>
+    
+</section>
+<section id="mala">
+<h3>Hinter'm Mala</h3>
+<p>
+Holmes and Watson's investigations take them across London. Sherlock
+deduces that West was murdered elsewhere, then moved to Aldgate
+Station to create the illusion that he was crushed on the tracks by
+a train. On their way to Woolwich Sherlock dispatches a telegram to
+Mycroft at London Bridge: "Send list of all foreign spies known to
+be in England, with full address."
+</p><br>
+     <div class=container>
+<audio class="js-player">
+<source src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.mp3"/>
+              </audio> </div>
+    <style> .container {position: fixedfix; width: 50%; background-color: blue;color: antiquewhite}</style>
+</section>
+<section id="rabet">
+<h3>Rabet</h3>
+<p>
+While investigating at Woolwich Arsenal Sherlock learns that West
+did not have the three keys&mdash;door, office, and
+safe&mdash;necessary to steal the papers. The train station clerk
+mentions seeing an agitated West boarding the 8:15 train to London
+Bridge. Sherlock suspects West of following someone who had access
+to the Woolwich chief's keyring with all three keys.
+</p><br>
+    <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/569005764&color=%23ffffff&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/radio-reudnitz" title="radio reudnitz" target="_blank" style="color: #cccccc; text-decoration: none;">radio reudnitz</a> · <a href="https://soundcloud.com/radio-reudnitz/sets/radio-reudnitz-bei-karla" title="Radio Reudnitz bei Karla Butter" target="_blank" style="color: #cccccc; text-decoration: none;">Radio Reudnitz bei Karla Butter</a></div>
+</section>
+<section id="bernhard">
+<h3>Bernhardiplatz</h3>
+<p>
+    
+Mycroft responds to Sherlock's telegram and mentions several spies.
+Hugo Oberstein of 13 Caulfield Gardens catches Sherlock's eye. He
+heads to the nearby Gloucester Road station to investigate and
+learns that the windows of Caulfield Gardens open over rail tracks
+where trains stop frequently.
+</p><br>
+</section>
+<section id="wurz">
+<h3>Wurzner Straße</h3>
+<p>
+Holmes deduces that the murderer placed West atop a stopped train at
+Caulfield Gardens. The train traveled to Aldgate Station before
+West's body finally toppled off. Backtracking to the criminal's
+apartment, Holmes finds a series of classified ads from
+<em>The Daily Telegraph</em> stashed away. All are under the name
+Pierrot: "Monday night after nine. Two taps. Only ourselves. Do not
+be so suspicious. Payment in hard cash when goods delivered."
+</p><br>
+     <audio id="player" controls>
+  <source src="/Users/AmSho/Desktop/kupäd/Bachelor/Recordings/Day 02 - 51.354975, 12.439810 - Güterbahnhof (Nordost)/Güterbahnhof (Nordost).mp3" type="audio/mp3" />
+  <source src="/path/to/audio.ogg" type="audio/ogg" />
+</audio>
+</section>
+          <section id="end">
+<h3>Vielen Dank</h3>
+<p>
+Holmes deduces that the murderer placed West atop a stopped train at
+Caulfield Gardens. The train traveled to Aldgate Station before
+West's body finally toppled off. Backtracking to the criminal's
+apartment, Holmes finds a series of classified ads from
+<em>The Daily Telegraph</em> stashed away. All are under the name
+Pierrot: "Monday night after nine. Two taps. Only ourselves. Do not
+be so suspicious. Payment in hard cash when goods delivered."
+</p><br>
+</section>
+</div>
+      
+    <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYW1zaG8iLCJhIjoiY2tsa25qNjRxMDI3NjJvbGx4em91c3IwciJ9.kJ9kiOvgJsnclpM5apI6tQ';  // replace this with your access token
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/amsho/ckli3tbdr16j917ln2ymn06oj/draft', // replace this with your style URL
+      center: [12.405906819225245,51.34336090087891],
+        pitch: 0,
+      zoom: 14.5
+    });
+        
+        
+map.on('load', function () {
+map.addSource('places', {
+'type': 'geojson',
+'data': {
+'type': 'FeatureCollection',
+    
+    
+'features': [
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Meißner Straße</strong> <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/330555918&color=%23ffffff&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/jochenschwarz" title="jochenschwarz" target="_blank" style="color: #cccccc; text-decoration: none;">jochenschwarz</a> · <a href="https://soundcloud.com/jochenschwarz/nuits-dete-arabian-nights" title="* Nuits d´été / Arabian Nights *" target="_blank" style="color: #cccccc; text-decoration: none;">* Nuits d´été / Arabian Nights *</a></div>', 
+'icon': 'table-tennis',
+},
+    
+'geometry': {
+'type': 'Point',
+'coordinates': [12.404866,
+      51.34744]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Hinter dem Mala</strong> <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/692323156&color=%23ffffff&inverse=false&auto_play=false&show_user=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/radio-reudnitz" title="radio reudnitz" target="_blank" style="color: #cccccc; text-decoration: none;">radio reudnitz</a> · <a href="https://soundcloud.com/radio-reudnitz/gymnastik-mit-brigittes" title="Gymnastik mit Brigittes B-Seiten" target="_blank" style="color: #cccccc; text-decoration: none;">Gymnastik mit Brigittes B-Seiten</a></div>',
+'icon': 'table-tennis'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [12.401943,
+      51.348665]
+}
+},
+{
+'type': 'Point',
+'properties': {
+'description':
+'<strong>East Park Fiction</strong><p> <img src="https://www.l-iz.de/wp-content/uploads/2016/09/schulze_delitzsch_beton.jpg" alt="Girl in a jacket" style="width:100 px;height:150px;"> </p>',
+'icon': 'table-tennis'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [12.409254,
+      51.346849]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Rabet</strong> <audio controls> <source src="/Users/AmSho/Desktop/kupäd/Bachelor/Recordings/Day 02 - 51.354975, 12.439810 - Güterbahnhof (Nordost)/Güterbahnhof (Nordost).mp3" type="audio/mp3" style="width:400 px;height:150px;" />',
+'icon': 'table-tennis'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [12.403803262824653,
+      51.34436246507187]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Bernhardiplatz</strong>',   
+'icon': 'table-tennis'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [ 12.404707,
+      51.340808]
+}
+},
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Wurzner Straße</strong><p>The annual <a href="http://www.capitalpride.org/parade" target="_blank" title="Opens in a new window">Capital Pride Parade</a> makes its way through Dupont this Saturday. 4:30 p.m. Free.</p>',
+'icon': 'table-tennis'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [12.409125,
+      51.341306]
+}
+}
+]
+}
+});
+// Add a layer showing the places.
+map.addLayer({
+'id': 'places',
+'type': 'symbol',
+'source': 'places',
+'layout': {
+'icon-image': '{icon}-15',
+'icon-allow-overlap': true
+}
+});
+ 
+// When a click event occurs on a feature in the places layer, open a popup at the
+// location of the feature, with description HTML from its properties.
+map.on('click', 'places', function (e) {
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.description;
+ 
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+var popup = new mapboxgl.Popup()
+.setLngLat(coordinates)
+.setHTML(description)
+.addTo(map);
+});
+ 
+    
+    
+// Change the cursor to a pointer when the mouse is over the places layer.
+map.on('mouseenter', 'places', function () {
+map.getCanvas().style.cursor = 'pointer';
+});
+ 
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', 'places', function () {
+map.getCanvas().style.cursor = '';
+});
+});
+        
+        
+
+        
+        var chapters = {
+  'start': {
+bearing: 0,
+center: [12.405906819225245,51.34336090087891],
+zoom: 13.5,
+pitch: 0
+},          
+'meißner': {
+bearing: 27,
+center: [12.404866,
+      51.34744],
+zoom: 16,
+pitch: 20
+},
+'east': {
+center: [12.409254,
+      51.346849],
+bearing: 150,
+zoom: 16,
+pitch: 0
+},
+'mala': {
+bearing: 90,
+center: [12.401943,
+      51.348665],
+zoom: 16,
+speed: 0.6,
+pitch: 40
+},
+'rabet': {
+bearing: 90,
+center: [12.403803262824653,
+      51.34436246507187],
+zoom: 16
+},
+'bernhard': {
+bearing: 90,
+center: [ 12.404707,
+      51.340808],
+zoom: 16
+},
+            'wurz': {
+bearing: 90,
+center: [12.409125,
+      51.341306],
+zoom: 16
+},
+                        'end': {
+bearing: 0,
+center: [12.405906819225245,51.34336090087891],
+zoom: 14
+},
+};
+        // On every scroll event, check which element is on screen
+window.onscroll = function () {
+var chapterNames = Object.keys(chapters);
+for (var i = 0; i < chapterNames.length; i++) {
+var chapterName = chapterNames[i];
+if (isElementOnScreen(chapterName)) {
+setActiveChapter(chapterName);
+break;
+}
+}
+};
+ 
+var activeChapterName = 'start';
+function setActiveChapter(chapterName) {
+if (chapterName === activeChapterName) return;
+ 
+map.flyTo(chapters[chapterName]);
+ 
+document.getElementById(chapterName).setAttribute('class', 'active');
+document.getElementById(activeChapterName).setAttribute('class', '');
+ 
+activeChapterName = chapterName;
+}
+ 
+function isElementOnScreen(id) {
+var element = document.getElementById(id);
+var bounds = element.getBoundingClientRect();
+return bounds.top < window.innerHeight && bounds.bottom > 0;
+}
+        
+        
+        
+    </script>
+      
+      <script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01", "img02");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+      
+  </body>
+    </body>
+</html>
