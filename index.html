@@ -7,6 +7,10 @@
 <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
 <link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet">
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js" ></script>
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Jura&family=Ranga&display=swap" rel="stylesheet"> 
+    
 <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css" />
 <script src="https://cdn.plyr.io/3.5.6/plyr.js"></script>
  <script>
@@ -15,9 +19,8 @@
       });
 </script> 
     <style>
-body {font-family: 'Ranga', cursive;}
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Ranga&display=swap" rel="stylesheet"> 
+body {font-family: 'Jura', sans-serif;}
+
 #myImg {
   border-radius: 5px;
   cursor: pointer;
@@ -118,6 +121,7 @@ body { margin: 0; padding: 0; }
     left: 50%;
   width: 50%; /* Full width */
 }
+      
 
 /* Links inside the navbar */
 .navbar a {
@@ -127,7 +131,7 @@ body { margin: 0; padding: 0; }
   text-align: center;
   padding: 14px 30px;
   text-decoration: none;
-    font-family: sans-serif;
+  font-family: 'Jura', sans-serif;
 }
 
 /* Change background on mouse-over */
@@ -136,6 +140,24 @@ body { margin: 0; padding: 0; }
   color: black;
 }
 
+img {
+    max-width: 100%;
+    max-height: 100%;
+}        
+
+        
+#logoContainer {
+  position: fixed;
+  z-index: 100;
+  top: 2%;
+  right: 1.2%;
+  background-color: transparent;
+  border: none;
+  width: 120px;
+  height: 100px;
+}
+      
+        
 /* Main content */
 .main {
   margin-top: 30px; /* Add a top margin to avoid content overlay */
@@ -155,7 +177,7 @@ width: 50%;
 #features {
 width: 50%;
 margin-left: 50%;
-font-family: sans-serif;
+font-family: 'Jura', sans-serif;
 overflow-y: scroll;
 background-color: #fafafa;
 }
@@ -175,29 +197,25 @@ margin-bottom: 200px;
 }
     .mapboxgl-popup {
 max-width: 800px;
-font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+font-family: 'Jura', sans-serif;
     
 }
     
 
 </style>
   <body>
-
-      <a class="navbar-brand" href="/">
-      <div class="logo-image">
-            <img src="image" class="img-fluid">
-      </div>
-</a>
       
       <div class="navbar">
   <a href="#klanginstallation">Klanginstallation</a>
   <a href="#konzept">Konzept</a>
   <a href="#kontakt">Kontakt</a>
   <a href="#zurück">Zurück</a> 
-      </div>        
-        
+            
 </div>
-
+     
+      <div id="logoContainer">
+<img src="/Users/AmSho/Desktop/kupäd/Bachelor/Mapbox/Grafik/ifae-logo.png">
+</div>
     <div id='map'></div>
       
       <div id="features">
@@ -347,7 +365,7 @@ map.addSource('places', {
 'type': 'Feature',
 'properties': {
 'description':
-'<strong>Elisabeth-Schumacher-Straße</strong><audio controls> <source src="sound/Güterbahnhof (Nordost).mp3" type="audio/mp3" style="width:400 px;height:150px;" />',
+'<strong>Elisabeth-Schumacher-Straße</strong><audio controls> <source src="sound/Güterbahnhof (Nordost).mp3" type="audio/mp3" style="width:400 px;height:150px;" />',
 'icon': 'music'
 },
 'geometry': {
@@ -531,7 +549,12 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 </script>
-      
+            
+     <script> var mapControlsContainer = document.getElementsByClassName("leaflet-control")[0];
+var logoContainer = document.getElementById("logoContainer");
+
+mapControlsContainer.appendChild(logoContainer);
+      </script>
   </body>
     </body>
 </html>
