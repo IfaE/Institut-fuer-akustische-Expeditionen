@@ -20,7 +20,16 @@
 </script> 
     <style>
 body {font-family: 'Jura', sans-serif;}
+        
+@font-face {
+    font-family: myFirstFont;
+    src:local("font/Minipax-Medium.woff2");
+}
 
+.minipax{
+    font-family: myFirstFont;
+}
+        
 #myImg {
   border-radius: 5px;
   cursor: pointer;
@@ -167,7 +176,7 @@ width: 50%;
 #features {
 width: 50%;
 margin-left: 50%;
-font-family: 'Jura', sans-serif;
+font-family: 'minipax', sans-serif;
 overflow-y: scroll;
 background-color: #fafafa;
 }
@@ -187,7 +196,7 @@ margin-bottom: 200px;
 }
     .mapboxgl-popup {
 max-width: 800px;
-font-family: 'Jura', sans-serif;
+font-family: 'minipax', sans-serif;
     
 }
     
@@ -216,8 +225,31 @@ In regelmäßigen Abständen werden Reisen zur akustischen Erfassung des Stadtra
 Die gesammelten Daten werden hier veröffentlicht:  <br>
 </section>
           
-          
-          
+<section id="rundling">
+<h3>Der Rundling</h3>
+<p>
+Der Rundling ist eine Wohnsiedlung im Südwesten Leipzigs.</p> <br>
+<div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/544903444?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="IMG_0322.MOV"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+    
+    
+</section>          
+    
+<section id="bunge">
+<h3>Kelterei Bunge</h3>
+<p>
+Die Östliche Rietzschke ist ein Bach, der durch die südöstlichen und östlichen Stadtteile Leipzigs fließt. Sein Name leitet sich vom sorbischen Wort rěčka für „Bach“ ab. Wasserrechtlich ist es ein Gewässer II. Ordnung.[1]
+Verlauf
+Die Östliche Rietzschke beginnt ihren Lauf aus einigen Feldbächen gespeist in Zuckelhausen, durchfließt die Stadtteile Holzhausen, Zweinaundorf (hier mündet der von Baalsdorf kommende Hohe Graben), Mölkau und Stünz, um dann in Sellerhausen in der Kanalisation der Stadt Leipzig zu enden. </p> <br>
+    <img class="myImages" img id="myImg" src="https://c.pxhere.com/images/95/0f/5314f4443884847dad5ebfbefd-1595582.jpg!d" alt="Kelterei Bunge" style="width:100%;max-width:300px">
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>          
+      
+</section>    
 <section id="rietzschke">
 <h3>Östliche Rietzschke</h3>
 <p>
@@ -333,6 +365,32 @@ map.addSource('places', {
 'type': 'Feature',
 'properties': {
 'description':
+'<strong>Der Rundling</strong> <audio controls> <source src="sound/Rietzschke (Ost).mp3" type="audio/mp3" style="width:300 px;height:150px;" />', 
+'icon': 'music',
+},
+    
+'geometry': {
+'type': 'Point',
+'coordinates': [12.392377, 51.296164]
+}
+}, 
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Kelterei Bunge</strong> <audio controls> <source src="sound/Rietzschke (Ost).mp3" type="audio/mp3" style="width:300 px;height:150px;" />', 
+'icon': 'music',
+},
+    
+'geometry': {
+'type': 'Point',
+'coordinates': [12.453678, 51.308585]
+}
+},    
+{
+'type': 'Feature',
+'properties': {
+'description':
 '<strong>Östliche Rietzschke</strong> <audio controls> <source src="sound/Rietzschke (Ost).mp3" type="audio/mp3" style="width:300 px;height:150px;" />', 
 'icon': 'music',
 },
@@ -347,7 +405,7 @@ map.addSource('places', {
 'type': 'Feature',
 'properties': {
 'description':
-'<strong>Elisabeth-Schumacher-Straße</strong> <audio controls> <source src="sound/Güterbahnhof (Nordost).mp3" type="audio/mp3" style="width:400 px;height:150px;" />',
+'<strong>Elisabeth-Schumacher-Straße</strong> <audio controls> <source src="sound/Güterbahnhof (Nordost).mp3" type="audio/mp3" style="width:400 px;height:150px;" />',
 'icon': 'music'
 },
 'geometry': {
@@ -436,38 +494,52 @@ bearing: 0,
 center: [12.360103,51.340199],
 zoom: 10,
 pitch: 0
+},   
+'rundling': {
+bearing: 0,
+center: [12.393577, 51.296324],
+zoom: 16,
+pitch: 0
+},   
+            'bunge': {
+bearing: 0,
+center: [12.453678, 51.308585],
+zoom: 16,
+pitch: 0
 },          
 'rietzschke': {
 bearing: 27,
 center: [12.453152,
       51.331208],
-zoom: 16,
+zoom: 14,
 pitch: 20
 },
 'elisabeth': {
 center: [12.439581,
       51.354749],
-bearing: 150,
-zoom: 16,
+bearing: 50,
+zoom: 13.6,
 pitch: 0
 },
 'parthe': {
-bearing: 90,
+bearing: 25,
 center: [12.423516, 51.379928],
-zoom: 16,
+zoom: 14,
 speed: 0.6,
 pitch: 40
 },
 'wahren': {
-bearing: 90,
+bearing: -20,
 center: [12.304385,
       51.388867],
-zoom: 16
+zoom: 13,
+pitch: 20
 },
                         'end': {
 bearing: 0,
 center: [12.360103,51.340199],
-zoom: 11.5
+zoom: 10,
+                            pitch: 50
 },
 };
         // On every scroll event, check which element is on screen
