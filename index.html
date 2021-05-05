@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
 <meta charset="utf-8">
 <title>IfaE</title>
 <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
@@ -11,13 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Jura&family=Ranga&display=swap" rel="stylesheet"> 
     
-<link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css" />
-<script src="https://cdn.plyr.io/3.5.6/plyr.js"></script>
- <script>
-      document.addEventListener('DOMContentLoaded', () => {
-          const player = Plyr.setup('.js-player');
-      });
-</script> 
+<link rel="stylesheet" href="https://cdn.plyr.io/3.6.7/plyr.css" />
+<script src="https://cdn.plyr.io/3.6.7/plyr.js"></script>
+
     <style>
         
 @font-face {
@@ -150,6 +145,7 @@ body { margin: 0; padding: 0; }
   top: 0; /* Position the navbar at the top of the page */
     left: 50%;
   width: 50%; /* Full width */
+     z-index: 5;
 }
       
 
@@ -159,23 +155,35 @@ body { margin: 0; padding: 0; }
   display: block;
   color: darkslategrey;
   text-align: center;
-  padding: 14px 30px;
+  padding: 14px 1px;
   text-decoration: none;
   font-family: 'fengardo';
+  margin-left: 2.15em;
 }
 
+/* 1st Link inside the navbar */    
+        .navbar-first {
+margin-left: 1em;}        
+        
 /* Change background on mouse-over */
 .navbar a:hover {
   color: deepskyblue;
-}*/ 
-
-img {
-    max-width: 100%;
-    max-height: 100%;
-}        
-
+} 
         
-    
+.logo-image{
+    width: 120px;
+    height: 30px;
+    overflow: hidden;
+    margin-top: 12px;
+margin-right: 45px;
+    float: right
+        
+}   
+
+        .popup-header{
+width: 100%;
+float: left;}        
+                     
         
 /* Main content */
 .main {
@@ -185,9 +193,6 @@ img {
 
     
     </style>
-
-</head>
-<body>
 <style>
 #map {
 position: fixed;
@@ -215,28 +220,38 @@ border-bottom: none;
 margin-bottom: 200px;
 }
     .mapboxgl-popup {
-max-width: 800px;
+max-width: 1100px !important;
 font-family: 'minipax', sans-serif;
     
 }
     
 
 </style>
-  <body>
-      
+</head>
+<body>
+
+
       <div class="navbar">
-  <a href="#klanginstallation">Klanginstallation</a>
+          <div class="logo-image">
+            <img src="img/Logo-03.png" width="100%"> 
+      </div>
+<div class="navbar-first">
+    <a href="#klanginstallation">Klanginstallation</a></div>
   <a href="#konzept">Konzept</a>
   <a href="#kontakt">Kontakt</a>
   <a href="#zurück">Zurück</a> 
-            
+      
+
+
 </div>
+    
+
 
     <div id='map'></div>
       
       <div id="features">
-          <section id="start" class="active">
-<h3>Institut für akustische Expeditionen<p> (Webseite befindet sich im Aufbau)</p>
+          <section id="start" class="active">         
+<h3>Institut für akustische Expeditionen<p> (Webseite befindet sich im Aufbau)</p> 
 </h3>
 
 <p>
@@ -245,6 +260,7 @@ font-family: 'minipax', sans-serif;
 In regelmäßigen Abständen werden Reisen zur akustischen Erfassung des Stadtraumes Leipzig durchgeführt. Im institutseigenen Labor werden die Aufnahmen aufgearbeitet, analysiert und beschriftet, dies geschieht mit exakt notierten GPS-Daten, sowie fotografischen Dokumentationen. 
 
 Die gesammelten Daten werden hier veröffentlicht: </h1> <br>
+              <audio id="player" controls> <source src="sound/Rietzschke (Ost).mp3"></audio>
 </section>
           
 <section id="rundling">
@@ -274,11 +290,11 @@ Die Östliche Rietzschke beginnt ihren Lauf aus einigen Feldbächen gespeist in 
 </section>    
 <section id="rietzschke">
 <h3>Östliche Rietzschke</h3>
-<p>
-Die Östliche Rietzschke ist ein Bach, der durch die südöstlichen und östlichen Stadtteile Leipzigs fließt. Sein Name leitet sich vom sorbischen Wort rěčka für „Bach“ ab. Wasserrechtlich ist es ein Gewässer II. Ordnung.[1]
+<h2> 17/03/2021 | 12.453678, 51.308585 | Kontaktmikrofon, Richtmikrofon, Stereomikrofon, Hydrophon </h2> <p> </p>
+<h1>Die Östliche Rietzschke ist ein Bach, der durch die südöstlichen und östlichen Stadtteile Leipzigs fließt. Sein Name leitet sich vom sorbischen Wort rěčka für „Bach“ ab. Wasserrechtlich ist es ein Gewässer II. Ordnung.[1]
 Verlauf
-Die Östliche Rietzschke beginnt ihren Lauf aus einigen Feldbächen gespeist in Zuckelhausen, durchfließt die Stadtteile Holzhausen, Zweinaundorf (hier mündet der von Baalsdorf kommende Hohe Graben), Mölkau und Stünz, um dann in Sellerhausen in der Kanalisation der Stadt Leipzig zu enden. </p> <br>
-    <img class="myImages" img id="myImg" src="https://c.pxhere.com/images/95/0f/5314f4443884847dad555ebfbefd-1595582.jpg!d" alt="Östliche Rietzschke" style="width:100%;max-width:300px">
+Die Östliche Rietzschke beginnt ihren Lauf aus einigen Feldbächen gespeist in Zuckelhausen, durchfließt die Stadtteile Holzhausen, Zweinaundorf (hier mündet der von Baalsdorf kommende Hohe Graben), Mölkau und Stünz, um dann in Sellerhausen in der Kanalisation der Stadt Leipzig zu enden. </h1><br>
+    <img class="myImages" img id="myImg" src="https://c.pxhere.com/images/95/0f/5314f4443884847dad555ebfbefd-1595582.jpg!d" alt="Östliche Rietzschke" style="width:100%">
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -292,8 +308,8 @@ Die Östliche Rietzschke beginnt ihren Lauf aus einigen Feldbächen gespeist in 
           
 <section id="elisabeth">
 <h3>Bahngleise an der Elisabeth-Schumacher-Straße</h3>
-<p>
-die trauer beim anblick des sprießenden krauts<br> 
+<h2> 17/03/2021 | 12.453678, 51.308585 | Kontaktmikrofon, Stereomikrofon</h2> <p> </p>
+<h1>die trauer beim anblick des sprießenden krauts<br> 
 zwischen den bahngleisen.<br> 
 heute morgen<br> 
 bin ich verblüht am rande<br> 
@@ -306,7 +322,7 @@ mit jedem atemzug<br>
 verlasse ich die welt einmal mehr.<br> 
 angenehme trauer<br> 
 des loslassens: welches auge bleibt?
- </p> <br>  <img class="myImages" img id="myImg" src="https://c.pxhere.com/photos/b7/88/blackandwhite_bw_art_monochrome_germany_deutschland_blackwhite_kunst-363621.jpg!d" alt="Bahngleise an der Elisabeth-Schumacher-Straße" style="width:100%;max-width:300px">
+ </h1><br>  <img class="myImages" img id="myImg" src="https://c.pxhere.com/photos/b7/88/blackandwhite_bw_art_monochrome_germany_deutschland_blackwhite_kunst-363621.jpg!d" alt="Bahngleise an der Elisabeth-Schumacher-Straße" style="width:100%">
 <!-- The Modal -->
 <div id="myModal" class="modal">
   <span class="close">&times;</span>
@@ -317,11 +333,11 @@ des loslassens: welches auge bleibt?
           
 <section id="parthe">
 <h3>An der Parthe</h3>
-<p>
-Die Parthe ist ein Fluss in Sachsen, der im Glastener Forst zwischen Colditz und Bad Lausick entspringt und nach 56,7 Kilometern Flusslauf in Leipzig in die Weiße Elster mündet. 
-</p><br>
+<h2> 23/03/2021 | 12.453678, 51.308585 | Kontaktmikrofon, Richtmikrofon, Stereomikrofon, Hydrophon</h2> <p> </p>
+<h1>Die Parthe ist ein Fluss in Sachsen, der im Glastener Forst zwischen Colditz und Bad Lausick entspringt und nach 56,7 Kilometern Flusslauf in Leipzig in die Weiße Elster mündet. 
+    </h1><br>
     
-    <img class="myImages" img id="myImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Parthe%2C_Naunhof-Lindhardt.jpg/1599px-Parthe%2C_Naunhof-Lindhardt.jpg" alt="An der Parthe" style="width:100%;max-width:300px">
+    <img class="myImages" img id="myImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Parthe%2C_Naunhof-Lindhardt.jpg/1599px-Parthe%2C_Naunhof-Lindhardt.jpg" alt="An der Parthe" style="width:100%">
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -333,12 +349,12 @@ Die Parthe ist ein Fluss in Sachsen, der im Glastener Forst zwischen Colditz und
 </section>
 <section id="wahren">
 <h3>Ehemaliges Bahnbetriebsgelände Wahren</h3>
-<p>
-    
+<h2> 23/03/2021 | 12.453678, 51.308585 | Kontaktmikrofon, Stereomikrofon</h2> <p> </p>
+<h1>  
 Im Leipziger Nordwesten befindet sich das Bahnbetriebswerk Leipzig-Wahren. Zunächst wurde es um 1880 als Bahnhof für den Personenverkehr eröffnet. Um 1900 wurden alle Rangierbahnhöfe vom Zentrum Leipzigs in die Vororte Leipzigs verlegt.
-</p><br>
+</h1>  <br>
     
-    <img class="myImages" img id="myImg" src="http://www.rottenplaces.de/main/wp-content/uploads/2014/07/G105360.jpg" alt="Bahnbetriebswerke Wahren" style="width:100%;max-width:300px">
+    <img class="myImages" img id="myImg" src="http://www.rottenplaces.de/main/wp-content/uploads/2014/07/G105360.jpg" alt="Bahnbetriebswerke Wahren" style="width:100%">
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -387,7 +403,7 @@ map.addSource('places', {
 'type': 'Feature',
 'properties': {
 'description':
-'<strong>Der Rundling</strong> <audio controls> <source src="sound/Rietzschke (Ost).mp3" type="audio/mp3" style="width:300 px;height:150px;" />', 
+'<div class="popup-heaeder"> <strong>Der Rundling</strong> </div><p> <audio id="player" controls> <source src="sound/Rietzschke (Ost).mp3"></audio></p>',
 'icon': 'music',
 },
     
@@ -400,7 +416,8 @@ map.addSource('places', {
 'type': 'Feature',
 'properties': {
 'description':
-'<strong>Kelterei Bunge</strong> <audio controls> <source src="sound/Rietzschke (Ost).mp3" type="audio/mp3" style="width:300 px;height:150px;" />', 
+'<div class="popup-heaeder"> <strong>Kelterei Bunge</strong></div><p><audio id="player" controls> <source src="sound/Rietzschke (Ost).mp3"> </audio></div></p> ',
+
 'icon': 'music',
 },
     
@@ -413,7 +430,7 @@ map.addSource('places', {
 'type': 'Feature',
 'properties': {
 'description':
-'<strong>Östliche Rietzschke</strong> <audio controls> <source src="sound/Rietzschke (Ost).mp3" type="audio/mp3" style="width:300 px;height:150px;" />', 
+'<div class="popup-heaeder"> <strong>Östliche Rietzschke</strong> </div> <p><audio controls> <source src="sound/Rietzschke (Ost).mp3" type="audio/mp3" style="width:300 px;height:150px;" /></p>', 
 'icon': 'music',
 },
     
@@ -427,7 +444,7 @@ map.addSource('places', {
 'type': 'Feature',
 'properties': {
 'description':
-'<strong>Elisabeth-Schumacher-Straße</strong> <audio controls> <source src="sound/Güterbahnhof (Nordost).mp3" type="audio/mp3" style="width:400 px;height:150px;" />',
+'<div class="popup-heaeder"> <strong>Elisabeth-Schumacher-Straße</strong></div> <p><audio controls> <source src="sound/Güterbahnhof (Nordost).mp3" type="audio/mp3" style="width:400 px;height:150px;" /></p>',
 'icon': 'music'
 },
 'geometry': {
@@ -440,7 +457,7 @@ map.addSource('places', {
 'type': 'Point',
 'properties': {
 'description':
-'<strong>An der Parthe</strong><p> <audio controls> <source src="sound/Parthe (Nord).mp3" type="audio/mp3" style="width:400 px;height:150px;" /></p>',
+'<div class="popup-heaeder"> <strong>An der Parthe</strong></div><p> <audio controls> <source src="sound/Parthe (Nord).mp3" type="audio/mp3" style="width:100% px;height:100%;" /></p>',
 'icon': 'music'
 },
 'geometry': {
@@ -451,8 +468,9 @@ map.addSource('places', {
 {
 'type': 'Feature',
 'properties': {
+    'audio': '<source src="sound/Parthe (Nord).mp3',
 'description':
-'<strong>Bahnbetriebsgelände Wahren</strong> <audio controls> <source src="sound/Wahren (Nordwest).mp3" type="audio/mp3" style="width:400 px;height:150px;" />',
+'<div class="popup-heaeder"><p> <strong>Bahnbetriebsgelände Wahren</strong></div></p>',
 'icon': 'music'
 },
 'geometry': {
@@ -626,6 +644,11 @@ span.onclick = function() {
 }
 </script>
 
-  </body>
+   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+          const player = new Plyr('audio', {});
+      });
+</script> 
     </body>
+   
 </html>
