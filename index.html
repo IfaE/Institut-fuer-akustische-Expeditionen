@@ -262,7 +262,24 @@ In regelmäßigen Abständen werden Reisen zur akustischen Erfassung des Stadtra
 Die gesammelten Daten werden hier veröffentlicht: </h1> <br>
               <audio id="player" controls> <source src="sound/Rietzschke (Ost).mp3"></audio>
 </section>
-          
+     
+<section id="westbahnhof">
+<h3>Westbahnhof >>TONINTON<<</h3>
+<h2> 01/04/2021 | 12.322978, 51.325552 | Richtmikrofon </h2> <p> </p> 
+<h1> >>TONINTON<< ist eine jährliche Ausstellung für Bildende Kunst und Musik,
+
+organisiert vom Fachschaftsrat Kunstpädagogik und Musikwissenschaften der Universität Leipzig.
+
+2021 feiert die Ausstellung ihr 10-Jähriges-Jubiläum!
+
+Ursprünglich ins Leben gerufen, um beide akademischen Fachrichtungen (die sich eine studentische Vertretung teilen) näher zu vernetzen, vereint die Ausstellung Arbeiten,
+
+die nach dem Prinzip der Vorlage und Reaktion in einen künstlerischen Dialog treten. 
+
+ Seit einigen Jahren ist das Projekt nicht nur geöffnet für Studierende, sondern für alle, die Lust haben sich am künstlerischen Austausch und beteiligen.  </h1><br>
+<img class="myImages" img id="myImg" src="img/TiTMiriam.jpg" alt="Malerei von Miriam Sommer" style="width:100%">
+</section>         
+       
 <section id="rundling">
 <h3>Der Rundling</h3>
 <h2> 01/04/2021 | 12.392377, 51.296164 | Kontaktmikrofon, Richtmikrofon, Stereomikrofon </h2> <p> </p> 
@@ -404,7 +421,22 @@ map.addSource('places', {
 '<div class="popup-heaeder"> <strong>Der Rundling</strong> </div><p> <audio id="player" controls> <source src="sound/Rietzschke (Ost).mp3"></audio></p>',
 'icon': 'music',
 },
-    
+
+'geometry': {
+'type': 'Point',
+'coordinates': [12.322978, 51.325552]
+}
+}, 
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<div class="popup-heaeder"> <strong>Westbahnhof >>>TONINTON<<</strong></div><p><audio id="player" controls> <source src="sound/Rietzschke (Ost).mp3"> </audio></div></p> ',
+
+'icon': 'music',
+},
+     
+ 
 'geometry': {
 'type': 'Point',
 'coordinates': [12.392377, 51.296164]
@@ -533,6 +565,14 @@ center: [12.360103,51.340199],
 zoom: 10,
 pitch: 0
 },   
+
+'westbahnhof': {
+bearing: 0,
+center: [12.322978, 51.325552],
+zoom: 16.5,
+pitch: 0
+},   
+
 'rundling': {
 bearing: 0,
 center: [12.393577, 51.296324],
