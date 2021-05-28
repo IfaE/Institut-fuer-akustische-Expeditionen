@@ -250,31 +250,6 @@ var bounds = element.getBoundingClientRect();
 return bounds.top < window.innerHeight && bounds.bottom > 0;
 }
 
-
-// MODAL AKA SHOWING IMG
-//const modal = document.querySelector(".modal");
-//const previews = document.querySelectorAll(".gallery img");
-//const original = document.querySelector(".full-img");
-//const caption = document.querySelector(".caption");
-
-//previews.forEach((preview) => {
-//preview.addEventListener("click", () => {
-    //modal.classList.add("open");
-    //original.classList.add("open");
-   // const originalSrc = preview.getAttribute("data-original");
-   // original.src = `./full/${originalSrc}`;
-   // const altText = preview.alt;
-   // const caption.textContent = altText;
-// });
-// });
-
-//modal.addEventListener("click", (e) => {
- //   if (e.target.classList.contains("modal")) {
- //       modal.classList.remove("open");
- //       original.classList.remove("open");
- //   }
-// })
-
 // AUDIO PLAYER
 document.addEventListener('DOMContentLoaded', () => {
           const player = new Plyr('audio', {});
