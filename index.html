@@ -3,9 +3,12 @@
     
 <head>
     
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+   
 <meta charset="utf-8">
 <title>IfaE</title>
-    
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+
 <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
     
 <link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet">
@@ -17,7 +20,8 @@
 <link rel="stylesheet" href="https://cdn.plyr.io/3.6.7/plyr.css" />
 <script src="https://cdn.plyr.io/3.6.7/plyr.js"></script>
     
-<link rel="stylesheet" type="text/css" href="https://ifae.github.io/Institut-fuer-akustische-Expeditionen/style.css">    
+<link rel="stylesheet" href="style.css">
+
     
     </head>
       
@@ -47,7 +51,7 @@
 In regelmäßigen Abständen werden Reisen zur akustischen Erfassung des Stadtraumes Leipzig durchgeführt. Im institutseigenen Labor werden die Aufnahmen aufgearbeitet, analysiert und beschriftet, dies geschieht mit exakt notierten GPS-Daten, sowie fotografischen Dokumentationen. 
 
 Die gesammelten Daten werden hier veröffentlicht: </h1> <br>
-
+              <audio id="player" controls> <source src="sound/Rietzschke (Ost).mp3"></audio>
 </section>
      
 <section id="westbahnhof">
@@ -65,18 +69,16 @@ die nach dem Prinzip der Vorlage und Reaktion in einen künstlerischen Dialog tr
 
  Seit einigen Jahren ist das Projekt nicht nur geöffnet für Studierende, sondern für alle, die Lust haben sich am künstlerischen Austausch und beteiligen.  </h1><br>
 
-<div class="gallery">
-<div class="img-container">
-    <img src="previews/img01-preview.jpg", alt="Miriam Sommerer", data-original="img01-full">
-     </div>    
+ <body class="w3-container">
+
+  <img src="full/img01-full.jpg" style="width:100%;cursor:zoom-in"
+  onclick="document.getElementById('modal01').style.display='block'">
+  
+  <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+    <div class="w3-modal-content w3-animate-opacity">
+      <img src="full/img01-full.jpg" style="width:100%">
     </div>
-<div class="modal">
-    <img src="previews/img01-full.jpg"
-         alt=""
-         class="full-img"
-/>
-      <p class="caption">Miriam Sommerer</p>
-    </div>
+  </div>
 
     
 </section>         
@@ -94,14 +96,16 @@ die nach dem Prinzip der Vorlage und Reaktion in einen künstlerischen Dialog tr
 <h1>Die Östliche Rietzschke ist ein Bach, der durch die südöstlichen und östlichen Stadtteile Leipzigs fließt. Sein Name leitet sich vom sorbischen Wort rěčka für „Bach“ ab. Wasserrechtlich ist es ein Gewässer II. Ordnung.[1]
 Verlauf
 Die Östliche Rietzschke beginnt ihren Lauf aus einigen Feldbächen gespeist in Zuckelhausen, durchfließt die Stadtteile Holzhausen, Zweinaundorf (hier mündet der von Baalsdorf kommende Hohe Graben), Mölkau und Stünz, um dann in Sellerhausen in der Kanalisation der Stadt Leipzig zu enden. </h1><br>
-    <img class="myImages" img id="myImg" src="img/IMG_0136.jpg" alt="Kelterei Bunge" style="width:100%">
+<body class="w3-container">
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>          
+  <img src="full/beispiel1-full.jpg" style="width:50%;cursor:zoom-in"
+  onclick="document.getElementById('modal02').style.display='block'">
+  
+  <div id="modal02" class="w3-modal" onclick="this.style.display='none'">
+    <div class="w3-modal-content w3-animate-zoom">
+      <img src="full/beispiel1-full.jpg" style="width:100%">
+    </div>
+  </div>     
       
 </section>    
 <section id="rietzschke">
