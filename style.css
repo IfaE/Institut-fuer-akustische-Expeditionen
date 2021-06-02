@@ -25,7 +25,7 @@ h1 {
     font-family: 'fengardo', sans-serif; font-size: 0.9em; line-height: 1.2em;
 }
         h3{ 
-    font-family: 'fengardo'; font-size: 2em; line-height: 0.1em;
+    font-family: 'fengardo'; font-size: 2em;
 }
 
 body { margin: 0; padding: 0;}
@@ -67,8 +67,8 @@ margin-left: 1em;}
 .logo-image{
     width: 70px;
     overflow: hidden;
-    margin-top: 3px;
-margin-right: 45px;
+    margin-top: 0.3em;
+    margin-right: 1em;
     float: right
         
 }   
