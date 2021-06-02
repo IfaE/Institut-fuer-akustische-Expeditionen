@@ -254,3 +254,4 @@ return bounds.top < window.innerHeight && bounds.bottom > 0;
 document.addEventListener('DOMContentLoaded', () => {
           const player = new Plyr('audio', {});
       });
+

@@ -63,7 +63,13 @@ margin-left: 1em;}
 .navbar a:hover {
   color: deepskyblue;
 } 
+
+.navbar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
         
+
 .logo-image{
     width: 70px;
     overflow: hidden;
