@@ -117,7 +117,20 @@ map.addSource('places', {
 'coordinates': [12.304385,
       51.388867]
 }
-}
+},
+{
+      'type': 'Feature',
+      'properties': {
+          'audio': '<source src="sound/xxx.mp3',
+      'description':
+      '<div class="popup-heaeder"><p> <strong>Palmengartenwehr</strong></div></p>',
+      'icon': 'marker'
+      },
+      'geometry': {
+      'type': 'Point',
+      'coordinates': [12.349679, 51.334996]
+      }
+      },
 ]
 }
 });
@@ -221,6 +234,14 @@ center: [12.304385,
 zoom: 13,
 pitch: 20
 },
+'wehr': {
+      bearing: -20,
+      center: [12.349679, 51.334996],
+      zoom: 13,
+      pitch: 20
+      },
+
+
                         'end': {
 bearing: 0,
 center: [12.360103,51.340199],
