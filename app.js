@@ -130,7 +130,7 @@ map.addLayer({
 'layout': {
 'icon-image': 'thisicon',
 'icon-allow-overlap': true,
-'icon-size': 0.5
+'icon-size': 0.05
 }
 });
  
