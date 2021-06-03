@@ -7,8 +7,15 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYW1zaG8iLCJhIjoiY2tsa25qNjRxMDI3NjJvbGx4em91c
         pitch: 0,
       zoom: 10
     });
-               
+  
+map.loadImage('icons/Icon-13.png', function(error, image) {
+    if (error) throw error;
+    map.addImage('thisicon', image);
+});
+
 map.on('load', function () {
+      
+      
 map.addSource('places', {
 'type': 'geojson',
 'data': {
@@ -22,7 +29,7 @@ map.addSource('places', {
 'properties': {
 'description':
 '<strong>Westbahnhof >>>TONINTON<<</strong></div><p><audio id="player" controls> <source src="sound/TonInTon.mp3"> </audio></div></p> ',
-'icon': 'music',
+'icon': 'marker',
 },
 
 'geometry': {
@@ -90,7 +97,7 @@ map.addSource('places', {
 'properties': {
 'description':
 '<div class="popup-heaeder"> <strong>An der Parthe</strong></div><p> <audio controls> <source src="sound/Parthe (Nord).mp3" type="audio/mp3" style="width:100% px;height:100%;" /></p>',
-'icon': 'music'
+'icon': 'marker'
 },
 'geometry': {
 'type': 'Point',
@@ -103,7 +110,7 @@ map.addSource('places', {
     'audio': '<source src="sound/Parthe (Nord).mp3',
 'description':
 '<div class="popup-heaeder"><p> <strong>Bahnbetriebsgelände Wahren</strong></div></p>',
-'icon': 'music'
+'icon': 'marker'
 },
 'geometry': {
 'type': 'Point',
@@ -114,14 +121,16 @@ map.addSource('places', {
 ]
 }
 });
+
 // Add a layer showing the places.
 map.addLayer({
 'id': 'places',
 'type': 'symbol',
 'source': 'places',
 'layout': {
-'icon-image': '{icon}-15',
-'icon-allow-overlap': true
+'icon-image': 'thisicon',
+'icon-allow-overlap': true,
+'icon-size': 1.5
 }
 });
  
