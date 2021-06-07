@@ -248,6 +248,13 @@ center: [12.360103,51.340199],
 zoom: 10,
                             pitch: 50
 },
+'kontakt': {
+      bearing: 0,
+      center: [12.360103,51.340199],
+      zoom: 7,
+                                  pitch: 50
+      },
+
 };
 
 // On every scroll event, check which element is on screen
