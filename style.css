@@ -38,7 +38,7 @@ body { margin: 0; padding: 0;}
   top: 0; /* Position the navbar at the top of the page */
     left: 50%;
   width: 50%; /* Full width */
-    /* z-index: 5;*/
+    z-index: 5;
 }
       
 
