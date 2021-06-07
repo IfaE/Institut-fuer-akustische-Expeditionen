@@ -42,7 +42,7 @@ body { margin: 0; padding: 0;}
 }
       
 
-/* Links inside the navbar */
+/* Links inside aaaathe navbar */
 .navbar a {
   float: left;
   display: block;
@@ -52,7 +52,7 @@ body { margin: 0; padding: 0;}
   text-decoration: none;
   font-family: 'fengardo';
   margin-left: 2.15em;
-  z-index: 4;
+  z-index: 5;
   position: sticky;
 }
 
