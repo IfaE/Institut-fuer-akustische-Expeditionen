@@ -242,7 +242,7 @@ pitch: 20
       },
 
 
-                        'end': {
+                        'about': {
 bearing: 0,
 center: [12.360103,51.340199],
 zoom: 10,
