@@ -48,10 +48,12 @@ body { margin: 0; padding: 0;}
   display: block;
   color: darkslategrey;
   text-align: center;
-  padding: 4% 5%;
+  padding: 1% 1%;
   text-decoration: none;
   font-family: 'fengardo';
   margin-left: 2.15em;
+  z-index: 4;
+  position: sticky;
 }
 
 /* 1st Link inside the navbar */    
