@@ -39,6 +39,7 @@ body { margin: 0; padding: 0;}
     left: 50%;
   width: 50%; /* Full width */
     z-index: 5;
+    border-bottom: 1px solid #000;
 }
       
 
@@ -105,11 +106,12 @@ overflow-y: scroll;
 background-color: #fafafa;
 }
 section {
-padding: 200px 50px;
+padding: 20em 3em;
 line-height: 25px;
 border-bottom: 1px solid #ddd;
 opacity: 0.25;
 font-size: 13px;
+border-bottom: 1px solid #000;
 }
 section.active {
 opacity: 1;
