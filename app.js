@@ -69,7 +69,7 @@ map.addSource('places', {
 'type': 'Feature',
 'properties': {
 'description':
-'<div class="popup-heaeder"> Östliche Rietzschke </div> <p><audio controls> <source src="sound/Rietzschke (Ost).mp3" type="audio/mp3" style="width:300 px;height:150px;" /></p>', 
+'<div class="popup-heaeder"> <strong>Östliche Rietzschke</strong> </div> <p><audio controls> <source src="sound/Rietzschke (Ost).mp3" type="audio/mp3" style="width:300 px;height:150px;" /></p>', 
 'icon': 'music',
 },
     
