@@ -41,7 +41,7 @@ map.addSource('places', {
 'type': 'Feature',
 'properties': {
 'description':
-'<div class="popup-heaeder"> <strong>Der Rundling</strong> </div><p> <audio id="player" controls> <source src="sound/Rietzschke (Ost).mp3"></audio></p>',
+'<div class="popup-heaeder"> <strong>Der Rundling</strong> </div>',
 'icon': 'music',
 },
      
@@ -55,7 +55,7 @@ map.addSource('places', {
 'type': 'Feature',
 'properties': {
 'description':
-'<div class="popup-heaeder"> <strong>Kelterei Bunge</strong></div><p><audio id="player" controls> <source src="sound/Rietzschke (Ost).mp3"> </audio></div></p> ',
+'<div class="popup-heaeder"> <strong>Kelterei Bunge</strong></div>',
 
 'icon': 'music',
 },
@@ -123,7 +123,7 @@ map.addSource('places', {
       'properties': {
           'audio': '<source src="sound/xxx.mp3',
       'description':
-      '<div class="popup-heaeder"><p> <strong>Palmengartenwehr</strong></div></p> <audio controls> <source src="sound/Palmengartenwehr.mp3" type="audio/mp3" style="width:100% px;height:100%;" /></p>',
+      '<div class="popup-heaeder"><p> <strong>Palmengartenwehr</strong></div></p> <audio controls> <source src="sound/palmengartenwehr_02.mp3" type="audio/mp3" style="width:100% px;height:100%;" /></p>',
       'icon': 'marker'
       },
       'geometry': {
