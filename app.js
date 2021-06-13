@@ -28,19 +28,6 @@ map.addSource('places', {
 'type': 'Feature',
 'properties': {
 'description':
-'<strong>Westbahnhof >>>TONINTON<<</strong></div><p><audio id="player" controls> <source src="sound/TonInTon.mp3"> </audio></div></p> ',
-'icon': 'marker',
-},
-
-'geometry': {
-'type': 'Point',
-'coordinates': [12.322978, 51.325552]
-}
-}, 
-{
-'type': 'Feature',
-'properties': {
-'description':
 '<div class="popup-heaeder"> <strong>Der Rundling</strong> </div>',
 'icon': 'music',
 },
@@ -82,6 +69,7 @@ map.addSource('places', {
 {
 'type': 'Feature',
 'properties': {
+      'audio': '<source src="sound/Güterbahnhof (Nordost).mp3"',
 'description':
 '<div class="popup-heaeder"> <strong>Elisabeth-Schumacher-Straße</strong></div> <p><audio controls> <source src="sound/Güterbahnhof (Nordost).mp3" type="audio/mp3" style="width:400 px;height:150px;" /></p>',
 'icon': 'music'
