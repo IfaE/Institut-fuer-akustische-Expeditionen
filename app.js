@@ -31,13 +31,12 @@ map.addSource('places', {
 '<div class="popup-heaeder"> <strong>Der Rundling</strong> </div>',
 'icon': 'music',
 },
-     
- 
 'geometry': {
 'type': 'Point',
 'coordinates': [12.392377, 51.296164]
 }
 }, 
+
 {
 'type': 'Feature',
 'properties': {
@@ -45,13 +44,13 @@ map.addSource('places', {
 'description':
 '<div class="popup-heaeder"> <strong>Kelterei Bunge</strong></div><p><audio controls> <source src="Kelterei Bunge.mp3" type="audio/mp3" style="width:300 px;height:150px;" /></p>',
 'icon': 'music',
-},
-    
+},  
 'geometry': {
 'type': 'Point',
 'coordinates': [12.453678, 51.308585]
 }
 },    
+
 {
 'type': 'Feature',
 'properties': {
@@ -59,13 +58,13 @@ map.addSource('places', {
 '<div class="popup-heaeder"> <strong>Östliche Rietzschke</strong> </div> <p><audio controls> <source src="sound/Rietzschke (Ost).mp3" type="audio/mp3" style="width:300 px;height:150px;" /></p>', 
 'icon': 'music',
 },
-    
 'geometry': {
 'type': 'Point',
 'coordinates': [12.453152,
       51.331208]
 }
 },
+
 {
 'type': 'Feature',
 'properties': {
@@ -80,6 +79,7 @@ map.addSource('places', {
       51.354749]
 }
 },
+
 {
 'type': 'Point',
 'properties': {
@@ -92,6 +92,7 @@ map.addSource('places', {
 'coordinates': [12.423516, 51.379928]
 }
 },
+
 {
 'type': 'Feature',
 'properties': {
@@ -106,19 +107,20 @@ map.addSource('places', {
       51.388867]
 }
 },
+
 {
-      'type': 'Feature',
-      'properties': {
-          'audio': '<source src="sound/palmenwehr_02.mp3',
-      'description':
-      '<div class="popup-heaeder"><p> <strong>Palmengartenwehr</strong></div></p> <audio controls> <source src="sound/palmenwehr_02.mp3" type="audio/mp3" style="width:100% px;height:100%;" /></p>',
-      'icon': 'marker'
-      },
-      'geometry': {
-      'type': 'Point',
-      'coordinates': [12.349679, 51.334996]
-      }
-      },
+'type': 'Feature',
+'properties': {
+     'audio': '<source src="sound/palmenwehr_02.mp3',
+'description':
+'<div class="popup-heaeder"><p> <strong>Palmengartenwehr</strong></div></p> <audio controls> <source src="sound/palmenwehr_02.mp3" type="audio/mp3" style="width:100% px;height:100%;" /></p>',
+'icon': 'marker'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [12.349679, 51.334996]
+}
+},
 ]
 }
 });
@@ -172,13 +174,6 @@ var chapters = {
 bearing: 0,
 center: [12.360103,51.340199],
 zoom: 10,
-pitch: 0
-},   
-
-'westbahnhof': {
-bearing: 0,
-center: [12.322978, 51.325552],
-zoom: 14,
 pitch: 0
 },   
 
