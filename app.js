@@ -107,9 +107,9 @@ map.addSource('places', {
 {
 'type': 'Feature',
 'properties': {
-    'audio': '<source src="sound/Parthe (Nord).mp3',
+    'audio': '<source src="sound/Wahren (Nordwest).mp3"',
 'description':
-'<div class="popup-heaeder"><p> <strong>Bahnbetriebsgelände Wahren</strong></div></p>',
+'<div class="popup-heaeder"><p> <strong>Bahnbetriebsgelände Wahren</strong></div><audio controls> <source src="sound/Wahren (Nordwest).mp3" type="audio/mp3" style="width:100% px;height:100%;" /></p>',
 'icon': 'marker'
 },
 'geometry': {
