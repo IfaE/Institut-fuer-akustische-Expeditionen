@@ -54,9 +54,9 @@ map.addSource('places', {
 {
 'type': 'Feature',
 'properties': {
+      'audio': '<source src="Kelterei Bunge.mp3"',
 'description':
-'<div class="popup-heaeder"> <strong>Kelterei Bunge</strong></div>',
-
+'<div class="popup-heaeder"> <strong>Kelterei Bunge</strong></div><p><audio controls> <source src="Kelterei Bunge.mp3" type="audio/mp3" style="width:300 px;height:150px;" /></p>',
 'icon': 'music',
 },
     
