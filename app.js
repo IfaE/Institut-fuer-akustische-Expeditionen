@@ -125,9 +125,9 @@ map.addSource('places', {
 {
       'type': 'Feature',
       'properties': {
-           'audio': '<source src="sound/Lindenauer Hafen - Recordings.mp3',
+           'audio': '<source src="sound/hafen.mp3',
       'description':
-      '<div class="popup-heaeder"><p> <strong>Lindenauer Hafen</strong></div></p> <audio controls> <source src="sound/Lindenauer Hafern - Recordings.mp3" type="audio/mp3" style="width:100% px;height:100%;" /></p>',
+      '<div class="popup-heaeder"><p> <strong>Lindenauer Hafen</strong></div></p> <audio controls> <source src="sound/hafen.mp3" type="audio/mp3" style="width:100% px;height:100%;" /></p>',
       'icon': 'marker'
       },
       'geometry': {
