@@ -121,6 +121,20 @@ map.addSource('places', {
 'coordinates': [12.349679, 51.334996]
 }
 },
+
+{
+      'type': 'Feature',
+      'properties': {
+           'audio': '<source src="sound/Lindenauer Hafen - Recordings.mp3',
+      'description':
+      '<div class="popup-heaeder"><p> <strong>Lindenauer Hafen</strong></div></p> <audio controls> <source src="sound/Lindenauer Hafern - Recordings.mp3" type="audio/mp3" style="width:100% px;height:100%;" /></p>',
+      'icon': 'marker'
+      },
+      'geometry': {
+      'type': 'Point',
+      'coordinates': [12.296466, 51.336576]
+      }
+      },
 ]
 }
 });
@@ -223,6 +237,12 @@ pitch: 20
       zoom: 13,
       pitch: 20
       },
+      'hafen': {
+            bearing: -20,
+            center: [12.296466, 51.336576],
+            zoom: 12,
+            pitch: 30
+            },
 
 
                         'about': {
