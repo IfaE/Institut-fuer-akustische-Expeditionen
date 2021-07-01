@@ -346,6 +346,11 @@ nav .container1 ul li.active a {
     }
   } 
 
+  @media (max-width: 768px) {
+    #nav2 {
+      pointer-events: none;
+    }
+  } 
 
 :root {
   --plyr-audio-controls-background: transparent;
