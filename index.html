@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="new.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CDNSFree2/Plyr/plyr.css" />
+
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js"></script>
+
+<script src="https://cdn.plyr.io/3.5.6/plyr.js"></script>
+<script>
+          document.addEventListener('DOMContentLoaded', () => {
+          // Controls (as seen below) works in such a way that as soon as you explicitly define (add) one control
+          // to the settings, ALL default controls are removed and you have to add them back in by defining those below.
+          // For example, let's say you just simply wanted to add 'restart' to the control bar in addition to the default.
+          // Once you specify *just* the 'restart' property below, ALL of the controls (progress bar, play, speed, etc) will be removed,
+          // meaning that you MUST specify 'play', 'progress', 'speed' and the other default controls to see them again.
+             const controls = [
+              'play-large', // The large play button in the center
+              'restart', // Restart playback
+              'rewind', // Rewind by the seek time (default 10 seconds)
+              'play', // Play/pause playback
+              'fast-forward', // Fast forward by the seek time (default 10 seconds)
+              'progress', // The progress bar and scrubber for playback and buffering
+              'current-time', // The current time of playback
+              'duration', // The full duration of the media
+              'mute', // Toggle mute
+              'volume', // Volume control
+              'captions', // Toggle captions
+              'settings', // Settings menu
+              'pip', // Picture-in-picture (currently Safari only)
+              'airplay', // Airplay (currently Safari only)
+              'download', // Show a download button with a link to either the current source or a custom URL you specify in your options
+              'fullscreen' // Toggle fullscreen
+          ];
+          const player = Plyr.setup('.js-player', { controls });
+      });
+  </script>
+
+<body>
+
+<nav id="nav1">
+        <div class="container1">
+          <ul>
+            <li class="about active"><a href="#about"><h2>About</h2></a></li>
+            <li class="contact"><a href="#contact"><h2>Contact</h2></a></li>
+            <li class="karte"><a href="#karte"><h2>Map</h2></a></li>
+          </ul>
+        </div>
+      </nav>
+      <nav id="nav2">
+        <div class="container2">
+          <ul>
+            <li class="norden"><a href="#norden"><h2>51.327113, 12.376462</h2></a></li>
+            <li class="westen"><a href="#westen"><h2>51.327113, 12.376462</h2></a></li>
+          </ul>
+        </div>
+      </nav>
+      <nav id="nav3">
+        <div class="container3">
+          <ul>
+            <li class="güterbahnring"><a href="#güterbahnring"><h2>Güterbahnring</h2></a></li>
+            <li class="wackelturm"><a href="#wackelturm"><h2>Wackelturm</h2></a></li>
+          </ul>
+        </div>
+      </nav>
+      <nav id="nav4">
+        <div class="container4">
+          <ul>
+            <li class="lindenauer"><a href="#lindenauer"><h2>Lindenauer Hafen</h2></a></li>
+            <li class="bahnbetrieb"><a href="#bahnbetrieb"><h2>Bahnbetriebsgelände</h2></a></li>
+            <li class="brauerei"><a href="#brauerei"><h2>Alte Brauerei</h2></a></li>
+          </ul>
+        </div>
+      </nav>
+      
+        <div class="flyinTxtCont">
+        <div class="flyIn lineOne">Institut</div>
+        <div class="flyIn lineTwo">für</div>
+        <div class="flyIn lineThree">akustische</div>
+  <div class="flyIn lineFour">Expedition</div>
+  
+        </div>
+        </div>
+
+      <section id="about">
+        <div class="section-container">
+        <h1>About</h1>
+        <h3>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
+          invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
+          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est 
+          Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed 
+          diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+          At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea 
+          takimata sanctus est Lorem ipsum dolor sit amet.</h3></section>
+
+      <section id="güterbahnring">
+               <div class="section-container">
+          <h1>Güterbahnring</h1> >
+          <h3>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
+            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
+            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est 
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed 
+            diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea 
+            takimata sanctus est Lorem ipsum dolor sit amet.</h3><br>
+            <audio controls id="player"> <source src="sound/Trains.mp3" type="audio/mp3" style="width:100% px;height:100%;" />
+          </div>
+            <div class="section-container">
+              <img
+              src="img/JPEG/trains.JPG"
+              alt="güterbahnring"
+              data-original="trains.jpg"
+              />
+       </div>
+       </section>
+      <section id="wackelturm">
+        <div class="section-container">
+          <h1>Wackelturm</h1> >
+          <h3>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
+            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
+            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est 
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed 
+            diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea 
+            takimata sanctus est Lorem ipsum dolor sit amet.</h3><br>
+            <audio controls id="player"> <source src="sound/wackelturm.mp3" type="audio/mp3" style="width:100% px;height:100%;" />
+          </div>
+            <div class="section-container">
+              <img
+              src="img/JPEG/wackelturm.jpg"
+              alt="wackelturm"
+              data-original="wackelturm.jpg"
+              />
+       </div>
+      </section>
+      <section id="brauerei">
+        <div class="section-container">
+          <h1>Alte Brauerei</h1> >
+          <h3>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
+            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
+            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est 
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed 
+            diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea 
+            takimata sanctus est Lorem ipsum dolor sit amet.</h3><br>
+            <audio controls id="player"> <source src="sound/alte brauerei_03.mp3" type="audio/mp3" style="width:100% px;height:100%;" />
+          </div>
+            <div class="section-container">
+              <img
+              src="img/JPEG/"
+              alt="wackelturm"
+              data-original=""
+              />
+       </div>
+      </section>
+      </section>
+      <section id="bahnbetrieb">
+        <div class="section-container">
+          <h1>Bahnbetriebsgelände</h1> >
+          <h3>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
+            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
+            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est 
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed 
+            diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea 
+            takimata sanctus est Lorem ipsum dolor sit amet.</h3><br>
+            <audio controls id="player"> <source src="sound/Wahren (Nordwest).mp3" type="audio/mp3" style="width:100% px;height:100%;" />
+          </div>
+            <div class="section-container">
+              <img
+              src="img/JPEG/"
+              alt="Bahnbetriebsgelände"
+              data-original=""
+              />
+       </div>
+      </section>
+      <section id="lindenauer">
+        <div class="section-container">
+          <h1>Lindenauer Hafen</h1> >
+          <h3>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
+            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
+            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est 
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed 
+            diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea 
+            takimata sanctus est Lorem ipsum dolor sit amet.</h3><br>
+            <audio controls id="player"> <source src="sound/lindenauer hafen.mp3" type="audio/mp3" style="width:100% px;height:100%;" />
+          </div>
+            <div class="section-container">
+              <img
+              src="img/JPEG/lindenauer hafen.jpg"
+              alt="Lindenauer Hafen"
+              data-original="lindenauer hafen.jpg"
+              />
+       </div>
+      </section>
+      <section id="rot">
+        <h1>Rot</h1>
+      </section>
+      <section id="blau">
+        <h1>Blau</h1>
+      </section>
+      <section id="karte">
+        <div id="map"></div>
+
+      </section>
+      <section id="contact">
+        <div class="section-container">
+        <h1>Contact</h1>
+        <h3>
+          Hey People, you can call me everytime. For sure.
+        Hugzzzzzz</h3>
+      </section>
+      <section id="contact">
+      </section>
+     
+      <script src="new2.js"></script>
+</body>
+</html>
