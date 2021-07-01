@@ -125,7 +125,7 @@ animation: txtFlyIn .3s linear;
 
 section {
   height: 100vh;
-  width: 75%;
+  width: 85%;
   background-color:rgb(0, 0, 0);
   display: flex;
   align-items: center;
