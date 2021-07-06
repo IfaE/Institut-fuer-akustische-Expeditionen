@@ -54,8 +54,40 @@ background-color: black;
 margin:0rem
 }
 
+.background {
+  height: 100%;
+  width: 100%;
+  background-size: 100%;
+  position: fixed;
+  z-index: -200;
+}
+.background path {
+  position: absolute;
+  z-index: -1;
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 690 1380;
+  animation: strokeAni 60s infinite ease-in-out;
+}
 
-
+.background path:hover {
+  stroke: blue;
+}
+ 
+@keyframes strokeAni {
+	0% {
+		stroke-dashoffset: 690;
+    stroke:darkred;
+	}
+  50% {
+		stroke-dashoffset: 0;
+    stroke:red;
+	}
+	100% {
+		stroke-dashoffset: 690;
+    stroke:darkred;
+	}
+}
 .flyinTxtCont {
   height: 100vh;
   display: -webkit-box;
@@ -74,6 +106,11 @@ margin:0rem
   padding-bottom: 10%;
   margin-left: 8%;
 }
+.flyinTxtCont {
+  animation: Txtbeat 1s infinite;
+  animation-delay: 3s;
+}
+
 .flyIn {
   color:#fff;
   font-family:'fengardo';
@@ -82,15 +119,16 @@ margin:0rem
   position:relative;
 text-shadow: 2px 2px 40px rgba(0,0,0,0.7);
 }
+
 .lineOne {
-transition-delay:.10s; 
+transition-delay:.30s; 
 transition:.10s ease in;
 animation: txtFlyIn .3s linear;
 }
 .lineTwo {
-  transition-delay:.6s; 
-  transition:.6s ease in;
-  animation: txtFlyIn .12s linear;
+  transition-delay:.30s; 
+  transition:.11s ease in;
+  animation: txtFlyIn .2s linear;
 }
 .lineThree {
   transition-delay:.9s; 
@@ -98,7 +136,7 @@ animation: txtFlyIn .3s linear;
   animation: txtFlyIn .15s linear;
 }
 .lineFour {
-  transition-delay:.6s; 
+  transition-delay:.12s; 
   transition:.8s ease in;
   animation: txtFlyIn .13s linear;
 }
@@ -125,7 +163,6 @@ animation: txtFlyIn .3s linear;
 section {
   height: 100vh;
   width: 85%;
-  background-color:rgb(0, 0, 0);
   display: flex;
   align-items: center;
   margin-left: 8%;
@@ -323,14 +360,15 @@ section {
 
 .section-container {
   justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 #home {
   background-color:#000000;
 }
 #about {
-  background-color: #000000;
-    padding-top: 5rem;
+  background:none;
+    /*padding-top: 5rem;*/
 }
 #footer {
   background-color:#000000;
@@ -420,6 +458,13 @@ nav .container1 ul li.active a {
     }
   } 
 
+  @media (max-width: 768px) {
+    .background {
+      width: 250%;
+      left:-93%;
+    }
+  }  
+  
 
 :root {
   --plyr-audio-controls-background: transparent;
