@@ -73,7 +73,6 @@ margin:0rem
   justify-content: flex-end;
   padding-bottom: 10%;
   margin-left: 8%;
-  margin-top: 4%;
 }
 .flyIn {
   color:#fff;
@@ -134,11 +133,193 @@ section {
   margin-top: 10rem;
 }
 
-.section-container img {
-  padding-left: 3rem;
-  width: 100vh;
-  object-fit: cover;
+.cssSlider {
+  width: 400%;
 }
+
+.slider {
+  overflow-x: hidden;
+}
+
+.sliderElements01
+.sliderElements01 figure,
+.sliderControls {
+    margin: 0;
+}
+
+.sliderElements02
+.sliderElements02 figure,
+.sliderControls {
+    margin: 0;
+}
+
+.sliderElements03
+.sliderElements03 figure,
+.sliderControls {
+    margin: 0;
+}
+ 
+.sliderElements01:after, .sliderElements02:after, .sliderElements03:after {
+    content: ".";
+    display: block;
+    height: .1px;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+    overflow: hidden;
+}
+ 
+.cssSlider {
+    overflow-x: hidden;
+}
+ 
+.sliderElements01, .sliderElements02, .sliderElements03 {
+    list-style: none;
+    position: relative;
+    left: 0;
+    width: 400%;
+    margin-bottom: .8em;
+    padding: 0;
+    -webkit-transition: left .8s ease-in-out;
+    -moz-transition: left .8s ease-in-out;
+    -o-transition: left .8s ease-in-out;
+    transition: left .8s ease-in-out;
+}
+
+ 
+.sliderElements01 > li {
+    float: left;
+    width: 25%;
+    position: relative;
+}
+ 
+#slide02:checked ~ .sliderElements01 {
+    left: -100%;
+}
+ 
+#slide03:checked ~ .sliderElements01 {
+    left: -200%;
+}
+ 
+#slide04:checked ~ .sliderElements01 {
+    left: -300%;
+}
+
+.sliderElements02 > li {
+  float: left;
+  width: 25%;
+  position: relative;
+}
+
+#slide06:checked ~ .sliderElements02 {
+  left: -100%;
+}
+
+#slide07:checked ~ .sliderElements02 {
+  left: -200%;
+}
+
+#slide08:checked ~ .sliderElements02 {
+  left: -300%;
+}
+
+.sliderElements03 > li {
+  float: left;
+  width: 25%;
+  position: relative;
+}
+
+#slide10:checked ~ .sliderElements03 {
+  left: -100%;
+}
+
+#slide11:checked ~ .sliderElements03 {
+  left: -200%;
+}
+
+#slide12:checked ~ .sliderElements03 {
+  left: -300%;
+}
+ 
+/* Bildunterschrift auf dem Bild positionieren */
+.sliderElements01 figcaption, .sliderElements02 figcaption, .sliderElements03 figcaption {
+    display: block;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 1em;
+    padding: .4em;
+    background: rgba(0,0,0,.5);
+    padding-left: 4rem;
+}
+ 
+/* Bilder responsive */
+.sliderElements01 img, .sliderElements02 img, .sliderElements03 img {
+    width: 100%;
+    height: auto;
+    padding-left: 4rem;
+}
+ 
+/* inputs aus dem Blickfeld schieben */
+.cssSlider input {
+    position: absolute;
+    left: -99999px;
+}
+ 
+/* mittige Ausrichtung der Controls - funktioniert im Zusammenspiel mit inline-block */
+.sliderControls01, .sliderControls02, .sliderControls03 {
+    text-align: center;
+    padding-left: 4rem;
+}
+ 
+/* Controls nebeneinander bringen */
+.sliderControls01 li, .sliderControls02 li, .sliderControls03 li {
+    display: inline-block;
+    padding-left: 1rem;
+}
+
+/* Controls auf einheitliche Maße bringen und die Ecken abrunden */
+.sliderControls01 label, .sliderControls02 label, .sliderControls03 label {
+  width: 13px;
+  height: 13px;
+  line-height: 20px;
+  font-size: 0.1rem;
+  text-align: center;
+  border-radius: 50%;
+  display: block;
+  cursor: pointer;
+  background: rgb(146, 146, 146);
+  color: rgb(146, 146, 146);
+}
+ 
+/* Attributselektor und indirekter Nachfahrkombinator zum ansteuern der labels */
+.sliderControls01 label:hover,
+#slide01:checked ~ .sliderControls01 label[for="slide01"],
+#slide02:checked ~ .sliderControls01 label[for="slide02"],
+#slide03:checked ~ .sliderControls01 label[for="slide03"],
+#slide04:checked ~ .sliderControls01 label[for="slide04"]{
+    background: white;
+    color: white;
+}
+
+.sliderControls02 label:hover,
+#slide05:checked ~ .sliderControls02 label[for="slide05"],
+#slide06:checked ~ .sliderControls02 label[for="slide06"],
+#slide07:checked ~ .sliderControls02 label[for="slide07"],
+#slide08:checked ~ .sliderControls02 label[for="slide08"]{
+  background: white;
+  color: white;
+}
+
+.sliderControls03 label:hover,
+#slide09:checked ~ .sliderControls03 label[for="slide09"],
+#slide10:checked ~ .sliderControls03 label[for="slide10"],
+#slide11:checked ~ .sliderControls03 label[for="slide11"],
+#slide12:checked ~ .sliderControls03 label[for="slide12"]{
+  background: white;
+  color: white;
+}
+
 
 .section-container {
   justify-content: center;
@@ -168,23 +349,27 @@ margin-top: 5rem;
   width: 100%;
   height: 100vh; }
 
-#nav1 {
-  position: fixed;
+
+
+  #nav1 {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+  }
+/* The Simple Menu */
+.container1 {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
   top: 0;
-  z-index: 100;
+  position: fixed;
+  background: linear-gradient(to bottom,#000000 70%, rgba(0,0,0,0) 100%);
 }
 
-nav .container1 {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    padding: 10px;
-    top: 0;
-    position: fixed;
-    background: linear-gradient(to bottom,#000000 70%, rgba(0,0,0,0) 100%);
-}
 nav .container1 ul li {
-  display: inline-block;
+display: inline-block;
+width: 17%;
 }
 nav .container1 ul li a {
   display: inline-block;
@@ -201,140 +386,29 @@ nav .container1 ul li.active a {
 }
 
 
-#nav2{
-    position: fixed;
-    bottom: 0;
-    width: 5rem;
-    height: 100%;
-    overflow-x: hidden;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    /*padding-top: 50px;*/
-  }
-  
-  #nav2 .container2 {
-    text-align: center;
-    text-decoration: none;
-    width: 100%;
-    color: #818181;
-    display: block;
-    height: 100%;
-    writing-mode: tb-rl;
-    transform: rotate(-180deg);
-    background: linear-gradient(to left,#000000 70%, rgba(0,0,0,0) 100%);
-  }
-  nav .container2 ul li {
-    display: inline-block;
-  }
-  nav .container2 ul li a {
-    display: inline-block;
-    text-decoration: none;
-    padding: 10px 20px;
-    color: rgb(146, 146, 146);
-  }
-  nav .container2 ul li.active {
-    background-color:transparent;
-    transition: 0.3s ease background-color;
-  }
-  nav .container2 ul li.active a {
-    color: rgb(250, 249, 249);
-  }
 
+/* dropdown */
+.dropdown ul{ position:relative;  }
 
-#nav3{
-  position: fixed;
-  bottom: 0;
-  width: 5rem;
-  height: 100%;
-  overflow-x: hidden;
-  top: 0;
-  right: 0;
-  z-index: 100;
-  /*padding-top: 50px;*/
-  }
-  
-  #nav3 .container3 {
-    text-align: center;
-    text-decoration: none;
-    width: 100%;
-    height: 100%;
-    color: #818181;
-    display: block;
-    writing-mode: tb-rl;
-    background: linear-gradient(to left,#000000 70%, rgba(0,0,0,0) 100%);
+.dropdown li > ul { 
+  background:black; 
+  text-align: justify;
+  display:none;
+  position:absolute;
+  z-index:1999;
 }
-  nav .container3 ul li {
-    display: inline-block;
-  }
-  nav .container3 ul li a {
-    display: inline-block;
-    text-decoration: none;
-    padding: 10px 20px;
-    color:rgb(146, 146, 146);
-  }
 
-  nav .container3 ul li.active {
-    background-color:transparent;
-    transition: 0.3s ease background-color;
-  }
-  nav .container3 ul li.active a {
-    color: rgb(250, 249, 249);
-  }
+.dropdown li > ul li{ display:block; 
+  width: 100%!important;
+}
 
-  #nav4 {
-    position: sticky;
-    bottom: 0;
-    z-index: 100;
-  }
-  
-  #nav4 .container4 {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    padding: 10px;
-    bottom: 0;
-    position: fixed;
-    background: linear-gradient(to top,#000000 70%, rgba(0,0,0,0) 100%);
-  }
-  nav .container4 ul li {
-    display: inline-block;
-  }
-  nav .container4 ul li a {
-    display: inline-block;
-    text-decoration: none;
-    padding: 10px 20px;
-    color: rgb(146, 146, 146);
-  }
+.dropdown li:hover  > ul{
+  display:block;
+}
 
-  nav .container4 ul li.active {
-    background-color:transparent;
-    transition: 0.3s ease background-color;
-  }
-  nav .container4 ul li.active a {
-    color: rgb(250, 249, 249);
-  }
 
   @media (max-width: 768px) {
-    .container2 {
-      display: none!important;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .container3 {
-      display: none!important;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .container4 {
-      display: none!important;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .section-container img {
+    .cssSlider {
       display: none!important;
     }
   } 
@@ -346,11 +420,6 @@ nav .container1 ul li.active a {
     }
   } 
 
-  @media (max-width: 768px) {
-    #nav2 {
-      pointer-events: none;
-    }
-  } 
 
 :root {
   --plyr-audio-controls-background: transparent;

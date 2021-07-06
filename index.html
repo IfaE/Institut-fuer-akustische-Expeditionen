@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="new.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.8/plyr.css" />
 
-<link href="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css" rel="stylesheet">
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css" rel="stylesheet" />
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js"></script>
 
 <script src="https://cdn.plyr.io/3.5.6/plyr.js"></script>
@@ -39,45 +39,37 @@
           ];
           const player = Plyr.setup('.js-player', { controls });
       });
+
+      
   </script>
+
 
 <body>
 
-<nav id="nav1">
-        <div class="container1">
-          <ul>
-            <li class="about active"><a href="#about"><h2>About</h2></a></li>
-            <li class="contact"><a href="#contact"><h2>Contact</h2></a></li>
-            <li class="karte"><a href="#karte"><h2>Map</h2></a></li>
-          </ul>
-        </div>
-      </nav>
-      <nav id="nav2">
-        <div class="container2">
-          <ul>
-            <li class="rundling"><a href="#rundling"><h2>Der Rundling</h2></a></li>
-            <li class="rietzschke"><a href="#rietzschke"><h2>Östliche Rietzschke</h2></a></li>
-          </ul>
-        </div>
-      </nav>
-      <nav id="nav3">
-        <div class="container3">
-          <ul>
-            <li class="güterbahnring"><a href="#güterbahnring"><h2>Güterbahnring</h2></a></li>
-            <li class="wackelturm"><a href="#wackelturm"><h2>Wackelturm</h2></a></li>
-          </ul>
-        </div>
-      </nav>
-      <nav id="nav4">
-        <div class="container4">
-          <ul>
-            <li class="lindenauer"><a href="#lindenauer"><h2>Lindenauer Hafen</h2></a></li>
-            <li class="bahnbetrieb"><a href="#bahnbetrieb"><h2>Bahnbetriebsgelände</h2></a></li>
-            <li class="brauerei"><a href="#brauerei"><h2>Alte Brauerei</h2></a></li>
-          </ul>
-        </div>
-      </nav>
-      
+
+
+  <nav id="nav1">
+    <div class="container1 dropdown">
+    <ul>
+      <li class="about"><a href="#about"><h2>About</h2></a></li>
+      <li class="contact"><a href="#contact"><h2>Contact</h2></a></li>
+      <li class="places"><a href="#places"><h2>Places</h2></a>
+        <ul>
+          <li class="rundling"><a href="#rundling"><h2>Der Rundling</h2></a></li>
+          <li class="rietzschke"><a href="#rietzschke"><h2>Östliche Rietzschke</h2></a></li>
+          <li class="güterbahnring"><a href="#güterbahnring"><h2>Güterbahnring</h2></a></li>
+          <li class="wackelturm"><a href="#wackelturm"><h2>Wackelturm</h2></a></li>
+          <li class="lindenauer"><a href="#lindenauer"><h2>Lindenauer Hafen</h2></a></li>
+          <li class="bahnbetrieb"><a href="#bahnbetrieb"><h2>Bahnbetriebsgelände</h2></a></li>
+          <li class="brauerei"><a href="#brauerei"><h2>Alte Brauerei</h2></a></li>
+        </ul>
+      <li class="karte"><a href="#karte"><h2>Map</h2></a></li>
+      </li>
+    </ul>
+  </div> 
+</nav>
+ 
+
         <div class="flyinTxtCont">
         <div class="flyIn lineOne">Institut</div>
         <div class="flyIn lineTwo">für</div>
@@ -128,13 +120,50 @@
             takimata sanctus est Lorem ipsum dolor sit amet.</h3><br>
             <audio controls id="player"> <source src="sound/Trains.mp3" type="audio/mp3" style="width:100% px;height:100%;" />
           </div>
-            <div class="section-container">
-              <img
-              src="img/JPEG/trains.JPG"
-              alt="güterbahnring"
-              data-original="trains.jpg"
-              />
-       </div>
+            <div class="cssSlider">
+ 
+    <!-- die inputs um den Slider zu Steuern -->
+    <input type="radio" name="slider01" id="slide01" checked="checked">
+    <input type="radio" name="slider01" id="slide02">
+    <input type="radio" name="slider01" id="slide03">
+    <input type="radio" name="slider01" id="slide04">
+ 
+    <!-- die einzelnen Slides, hier als Liste angelegt -->
+    <ul class="sliderElements01">
+        <li>
+            <figure>
+                <img src="img/JPEG/kelterei.jpg" alt="" width="1200" height="400">
+                <figcaption></figcaption>
+            </figure>
+        </li>
+        <li>
+            <figure>
+                <img src="img/JPEG/parthe.jpg" alt="" width="1200" height="400">
+                <figcaption></figcaption>
+            </figure>
+        </li>
+        <li>
+            <figure>
+                <img src="img/JPEG/unkraut.jpg" alt="" width="1200" height="400">
+                <figcaption></figcaption>
+            </figure>
+        </li>
+        <li>
+            <figure>
+                <img src="img/JPEG/wavy.JPG" alt="" width="1200" height="400">
+                <figcaption></figcaption>
+            </figure>
+        </li>
+    </ul>
+ 
+    <!-- Eine Steuerung -->
+    <ul class="sliderControls01">
+        <li><label for="slide01">1</label></li>
+        <li><label for="slide02">2</label></li>
+        <li><label for="slide03">3</label></li>
+        <li><label for="slide04">4</label></li>
+    </ul>
+</div>
        </section>
       <section id="wackelturm">
         <div class="section-container">
@@ -148,13 +177,49 @@
             takimata sanctus est Lorem ipsum dolor sit amet.</h3><br>
             <audio controls id="player"> <source src="sound/wackelturm.mp3" type="audio/mp3" style="width:100% px;height:100%;" />
           </div>
-            <div class="section-container">
-              <img
-              src="img/JPEG/wackelturm.jpg"
-              alt="wackelturm"
-              data-original="wackelturm.jpg"
-              />
-       </div>
+          <div class="cssSlider">
+ 
+            <input type="radio" name="slider02" id="slide05" checked="checked">
+            <input type="radio" name="slider02" id="slide06">
+            <input type="radio" name="slider02" id="slide07">
+            <input type="radio" name="slider02" id="slide08">
+         
+ 
+            <ul class="sliderElements02">
+                <li>
+                    <figure>
+                        <img src="img/JPEG/lindenauer hafen.jpg" alt="" width="1200" height="400">
+                        <figcaption></figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="img/JPEG/trains.JPG" alt="" width="1200" height="400">
+                        <figcaption></figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="img/JPEG/wackelturm.jpg" alt="" width="1200" height="400">
+                        <figcaption></figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="img/JPEG/schönau.jpg" alt="" width="1200" height="400">
+                        <figcaption></figcaption>
+                    </figure>
+                </li>
+            </ul>
+
+            <ul class="sliderControls02">
+                <li><label for="slide05">5</label></li>
+                <li><label for="slide06">6</label></li>
+                <li><label for="slide07">7</label></li>
+                <li><label for="slide08">8</label></li>
+            </ul>
+        </div>
+
       </section>
       <section id="brauerei">
         <div class="section-container">
@@ -168,13 +233,7 @@
             takimata sanctus est Lorem ipsum dolor sit amet.</h3><br>
             <audio controls id="player"> <source src="sound/alte brauerei_03.mp3" type="audio/mp3" style="width:100% px;height:100%;" />
           </div>
-            <div class="section-container">
-              <img
-              src="img/JPEG/alte brauerei.jpg"
-              alt="wackelturm"
-              data-original="alte brauerei.JPG"
-              />
-       </div>
+
       </section>
       </section>
       <section id="bahnbetrieb">
@@ -189,13 +248,7 @@
             takimata sanctus est Lorem ipsum dolor sit amet.</h3><br>
             <audio controls id="player"> <source src="sound/bahnbetriebswerke.mp3" type="audio/mp3" style="width:100% px;height:100%;" />
           </div>
-            <div class="section-container">
-              <img
-              src="img/JPEG/"
-              alt="Bahnbetriebsgelände"
-              data-original=""
-              />
-       </div>
+
       </section>
       <section id="lindenauer">
         <div class="section-container">
@@ -209,13 +262,48 @@
             takimata sanctus est Lorem ipsum dolor sit amet.</h3><br>
             <audio controls id="player"> <source src="sound/lindenauer hafen.mp3" type="audio/mp3" style="width:100% px;height:100%;" />
           </div>
-            <div class="section-container">
-              <img
-              src="img/JPEG/lindenauer hafen.jpg"
-              alt="Lindenauer Hafen"
-              data-original="lindenauer hafen.jpg"
-              />
-       </div>
+          <div class="cssSlider">
+ 
+            <input type="radio" name="slider03" id="slide09" checked="checked">
+            <input type="radio" name="slider03" id="slide10">
+            <input type="radio" name="slider03" id="slide11">
+            <input type="radio" name="slider03" id="slide12">
+         
+ 
+            <ul class="sliderElements03">
+                <li>
+                    <figure>
+                        <img src="img/JPEG/lindenauer hafen_02.jpg" alt="" width="1200" height="400">
+                        <figcaption></figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="img/JPEG/lindenauer hafen_04.JPG" alt="" width="1200" height="400">
+                        <figcaption></figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="img/JPEG/lindenauer hafen_03.jpg" alt="" width="1200" height="400">
+                        <figcaption></figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="img/JPEG/lindenauer hafen_01.jpg" alt="" width="1200" height="400">
+                        <figcaption></figcaption>
+                    </figure>
+                </li>
+            </ul>
+
+            <ul class="sliderControls03">
+                <li><label for="slide09">09</label></li>
+                <li><label for="slide10">10</label></li>
+                <li><label for="slide11">11</label></li>
+                <li><label for="slide12">12</label></li>
+            </ul>
+        </div>
        
       </section>
       <section id="rundling">
@@ -230,13 +318,7 @@
             takimata sanctus est Lorem ipsum dolor sit amet.</h3><br>
             <audio controls id="player"> <source src="sound/" type="audio/mp3" style="width:100% px;height:100%;" />
           </div>
-            <div class="section-container">
-              <img
-              src="img/JPEG/rundling.jpg"
-              alt="Lindenauer Hafen"
-              data-original="rundling.jpg"
-              />
-       </div>
+   
        
       </section>
       <section id="rietzschke">
@@ -257,5 +339,6 @@
       </section>
      
       <script src="new2.js"></script>
+
 </body>
 </html>
