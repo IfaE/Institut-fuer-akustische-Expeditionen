@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Institut für akustische Expedition</title>
     <link rel="stylesheet" href="new.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.8/plyr.css" />
 
 <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css" rel="stylesheet" />
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js"></script>
 
-<script src="https://cdn.plyr.io/3.5.6/plyr.js"></script>
+<script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.8/plyr.css" />
+
 <script>
           document.addEventListener('DOMContentLoaded', () => {
           // Controls (as seen below) works in such a way that as soon as you explicitly define (add) one control
@@ -55,7 +56,6 @@
     <div class="container1 dropdown">
     <ul>
       <li class="about"><a href="#about"><h2>About</h2></a></li>
-      <li class="contact"><a href="#contact"><h2>Contact</h2></a></li>
       <li class="places"><a href="#places"><h2>Places</h2></a>
         <ul>
           <li class="rundling"><a href="#rundling"><h2>Der Rundling</h2></a></li>
@@ -67,6 +67,7 @@
           <li class="brauerei"><a href="#brauerei"><h2>Alte Brauerei</h2></a></li>
         </ul>
       <li class="karte"><a href="#karte"><h2>Map</h2></a></li>
+      <li class="contact"><a href="impressum.html"><h2>Imprint</h2></a></li>
       </li>
     </ul>
   </div> 
@@ -113,7 +114,7 @@
 
       <section id="güterbahnring">
                <div class="section-container">
-          <h1>Güterbahnring</h1> >
+          <h1>Güterbahnring <a href="#karte"><img class="icon" src="icons/icon-pointonmap-white-08.svg" alt="image"/></a></h1> 
           <h3>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
             invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
             et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est 
@@ -156,7 +157,7 @@
        </section>
       <section id="wackelturm">
         <div class="section-container">
-          <h1>Wackelturm</h1> >
+          <h1>Wackelturm <a href="#karte"><img class="icon" src="icons/icon-pointonmap-white-08.svg" alt="image"/></a></h1> 
           <h3>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
             invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
             et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est 
@@ -205,7 +206,7 @@
       </section>
       <section id="brauerei">
         <div class="section-container">
-          <h1>Alte Brauerei</h1> >
+          <h1>Alte Brauerei <a href="#karte"><img class="icon" src="icons/icon-pointonmap-white-08.svg" alt="image"/></a></h1> 
           <h3>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
             invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
             et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est 
@@ -220,7 +221,7 @@
       </section>
       <section id="bahnbetrieb">
         <div class="section-container">
-          <h1>Bahnbetriebsgelände</h1> >
+          <h1>Bahnbetriebsgelände <a href="#karte"><img class="icon" src="icons/icon-pointonmap-white-08.svg" alt="image"/></a></h1> 
           <h3>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
             invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
             et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est 
@@ -234,7 +235,7 @@
       </section>
       <section id="lindenauer">
         <div class="section-container">
-          <h1>Lindenauer Hafen</h1> >
+          <h1>Lindenauer Hafen <a href="#karte"><img class="icon" src="icons/icon-pointonmap-white-08.svg" alt="image"/></a></h1> 
           <h3>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
             invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
             et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est 
@@ -290,7 +291,9 @@
       </section>
       <section id="rundling">
         <div class="section-container">
-          <h1>Der Rundling</h1> >
+          <h1>Der Rundling
+            <a href="#karte"><img class="icon" src="icons/icon-pointonmap-white-08.svg" alt="image"/></a>
+          </h1> 
           <h3>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
             invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
             et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est 
@@ -304,22 +307,14 @@
        
       </section>
       <section id="rietzschke">
-        <h1>Östliche Rietzschke</h1>
+        <h1>Östliche Rietzschke <a href="#karte"><img class="icon" src="icons/icon-pointonmap-white-08.svg" alt="image"/></a></h1>
       </section>
       <section id="karte">
         <div id="map"></div>
 
       </section>
-      <section id="contact">
-        <div class="section-container">
-        <h1>Contact</h1>
-        <h3>
-          Hey People, you can call me everytime. For sure.
-        Hugzzzzzz</h3>
-      </section>
-      <section id="contact">
-      </section>
-     
+
+
       <script src="new2.js"></script>
 
 </body>

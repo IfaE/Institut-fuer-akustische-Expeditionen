@@ -70,9 +70,7 @@ margin:0rem
   animation: strokeAni 60s infinite ease-in-out;
 }
 
-.background path:hover {
-  stroke: blue;
-}
+
  
 @keyframes strokeAni {
 	0% {
@@ -370,6 +368,20 @@ section {
   background:none;
     /*padding-top: 5rem;*/
 }
+
+#impressum {
+  width: 85%;
+    display: block;
+    position: relative;
+    margin-left: 8%;
+    margin-top: 20%;
+    padding-top: 0;
+
+}
+#back {
+  float: right;
+}
+
 #footer {
   background-color:#000000;
 }
@@ -380,6 +392,14 @@ section {
 #contact {
 margin-top: 5rem;
 }
+
+.icon {
+  color: white;
+  width: 2rem;
+  display: inline-block;
+  position: relative;
+}
+
 
 #map { display: block;
   position: relative;
@@ -464,6 +484,8 @@ nav .container1 ul li.active a {
       left:-93%;
     }
   }  
+
+ 
   
 
 :root {
@@ -473,30 +495,3 @@ nav .container1 ul li.active a {
   --plyr-color-main: transparent;
   --plyr-font-family: "fengardo";
   }
-
-
-
-
-/* ********************* */
-/* This Code is for only the floating card in right bottom corner */
-/* ********************** */
-
-
-a {
-  padding: 0;
-  margin: 0;
-  color: var(--color-4);
-  text-decoration: none;
-}
-#webCifar-sidebox {
-  position: fixed;
-  right: 0px;
-  bottom: 0px;
-  overflow-x: clip;
-  width: 300px;
-  font-size: 16px;
-}
-#webCifar-sidebox p {
-  padding: 0;
-  margin: 0;
-}
