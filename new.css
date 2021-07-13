@@ -36,7 +36,6 @@ h2 {
   line-height: 1.5em; 
   margin-bottom: 1rem;
   scroll-behavior: smooth;
-  color:darkgrey;
 }
 
 h3 {
@@ -45,6 +44,15 @@ h3 {
   line-height: 1.6em;
   scroll-behavior: smooth;
   color: white;
+}
+
+h4 {
+  font-family: 'fengardo', 
+  sans-serif; font-size: 0.9em; 
+  line-height: 1.5em; 
+  margin-bottom: 1rem;
+  scroll-behavior: smooth;
+  color: darkgrey;
 }
 
 * {
@@ -411,7 +419,7 @@ section {
 }
 
 #impressum {
-  width: 85%;
+  width: 45%;
     display: block;
     position: relative;
     margin-left: 8%;
