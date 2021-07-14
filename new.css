@@ -40,8 +40,8 @@ h2 {
 
 h3 {
   font-family: 'Minipax-Regular';
-  font-size: 1em;
-  line-height: 1.6em;
+  font-size: 0.9em;
+  line-height: 1.65em;
   scroll-behavior: smooth;
   color: white;
 }
@@ -154,7 +154,7 @@ animation: txtFlyIn .3s linear;
 
 
 .lineOne, .lineTwo, .lineThree, .lineFour {
-  font-size:2.5rem;
+  font-size:3rem;
   font-weight: none;
   letter-spacing: 3px;
   text-align: center;
