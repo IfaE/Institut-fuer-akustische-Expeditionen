@@ -419,6 +419,9 @@ section {
     background: rgba(0, 0, 0, 0.7);
   }
 }
+@supports (-webkit-touch-callout: none) {
+  background: rgba(0, 0, 0, 0.7);
+}
 
 #home {
   background-color:#000000;
