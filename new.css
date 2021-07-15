@@ -1,12 +1,12 @@
 
 
 @font-face {
-  font-family: 'Minipax-Regular';
-  src: url('font/Minipax-Regular.eot');
-  src: url('font/Minipax-Regular.eot') format('embedded-opentype'),
-       url('font/Minipax-Regular.woff') format('woff'),
-       url('font/Minipax-Regular.ttf') format('truetype'),
-       url('font/Minipax-Regular.woff2') format('woff2');
+  font-family: 'Minipax-Medium', serif;
+  src: url('font/Minipax-Medium.eot');
+  src: url('font/Minipax-Medium.eot') format('embedded-opentype'),
+       url('font/Minipax-Medium.woff') format('woff'),
+       url('font/Minipax-Medium.ttf') format('truetype'),
+       url('font/Minipax-Medium.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
       }
@@ -39,11 +39,13 @@ h2 {
 }
 
 h3 {
-  font-family: 'Minipax-Regular';
-  font-size: 0.9em;
-  line-height: 1.65em;
+  font-family: 'Minipax-Medium';
+  font-size: 12pt;
+  line-height: 1.5em;
   scroll-behavior: smooth;
   color: white;
+  font-weight: normal;
+  font-style: normal;
 }
 
 h4 {
@@ -403,11 +405,19 @@ section {
   }
 } 
 
+
 .section-container {
   justify-content: center;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(40, 40, 40, 0.1);
   padding: 1rem;
   width: 200%;
+  backdrop-filter: blur(3px);
+}
+
+@-moz-document url-prefix() {
+  .section-container {
+    background: rgba(0, 0, 0, 0.7);
+  }
 }
 
 #home {
@@ -416,6 +426,7 @@ section {
 #about {
   background:none;
   margin-bottom: 5rem;
+  max-width: 600px;
     /*padding-top: 5rem;*/
 }
 
