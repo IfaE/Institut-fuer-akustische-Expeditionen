@@ -328,21 +328,21 @@ animation: txtFlyIn .3s linear;
   left: -300%;
 }
 
-.sliderElements05 > li {
+.sliderElements06 > li {
   float: left;
   width: 25%;
   position: relative;
 }
 
-#slide21:checked ~ .sliderElements05 {
+#slide22:checked ~ .sliderElements06 {
   left: -100%;
 }
 
-#slide22:checked ~ .sliderElements05 {
+#slide23:checked ~ .sliderElements06 {
   left: -200%;
 }
 
-#slide24:checked ~ .sliderElements05 {
+#slide24:checked ~ .sliderElements06 {
   left: -300%;
 }
  
@@ -444,10 +444,10 @@ animation: txtFlyIn .3s linear;
 }
 
 .sliderControls06 label:hover,
-#slide21:checked ~ .sliderControls05 label[for="slide21"],
-#slide22:checked ~ .sliderControls05 label[for="slide22"],
-#slide23:checked ~ .sliderControls05 label[for="slide23"],
-#slide24:checked ~ .sliderControls05 label[for="slide24"]{
+#slide21:checked ~ .sliderControls06 label[for="slide21"],
+#slide22:checked ~ .sliderControls06 label[for="slide22"],
+#slide23:checked ~ .sliderControls06 label[for="slide23"],
+#slide24:checked ~ .sliderControls06 label[for="slide24"]{
   background: white;
   color: white;
 }
