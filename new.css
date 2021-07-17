@@ -197,8 +197,14 @@ animation: txtFlyIn .3s linear;
 .sliderControls {
     margin: 0;
 }
+
+.sliderElements05
+.sliderElements05 figure,
+.sliderControls {
+    margin: 0;
+}
  
-.sliderElements01:after, .sliderElements02:after, .sliderElements03:after {
+.sliderElements01:after, .sliderElements02:after, .sliderElements03:after, .sliderElements05:after {
     content: ".";
     display: block;
     height: .1px;
