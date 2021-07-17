@@ -212,7 +212,7 @@ animation: txtFlyIn .3s linear;
     overflow-x: hidden;
 }
  
-.sliderElements01, .sliderElements02, .sliderElements03, .sliderElements04 {
+.sliderElements01, .sliderElements02, .sliderElements03, .sliderElements04, .sliderElements05 {
     list-style: none;
     position: relative;
     left: 0;
@@ -297,9 +297,27 @@ animation: txtFlyIn .3s linear;
 #slide16:checked ~ .sliderElements04 {
   left: -300%;
 }
+
+.sliderElements05 > li {
+  float: left;
+  width: 25%;
+  position: relative;
+}
+
+#slide18:checked ~ .sliderElements05 {
+  left: -100%;
+}
+
+#slide19:checked ~ .sliderElements05 {
+  left: -200%;
+}
+
+#slide20:checked ~ .sliderElements05 {
+  left: -300%;
+}
  
 /* Bildunterschrift auf dem Bild positionieren */
-.sliderElements01 figcaption, .sliderElements02 figcaption, .sliderElements03 figcaption, .sliderElements04 figcaption  {
+.sliderElements01 figcaption, .sliderElements02 figcaption, .sliderElements03 figcaption, .sliderElements04 figcaption, .sliderElements05 figcaption  {
     display: block;
     color: #fff;
     position: absolute;
@@ -311,7 +329,7 @@ animation: txtFlyIn .3s linear;
 }
  
 /* Bilder responsive */
-.sliderElements01 img, .sliderElements02 img, .sliderElements03 img, .sliderElements04 img {
+.sliderElements01 img, .sliderElements02 img, .sliderElements03 img, .sliderElements04 img, .sliderElements05 img {
     width: 100%;
     height: auto;
     padding-left: 4rem;
@@ -324,19 +342,19 @@ animation: txtFlyIn .3s linear;
 }
  
 /* mittige Ausrichtung der Controls - funktioniert im Zusammenspiel mit inline-block */
-.sliderControls01, .sliderControls02, .sliderControls03, .sliderControls04 {
+.sliderControls01, .sliderControls02, .sliderControls03, .sliderControls04, .sliderControls05 {
     text-align: center;
     padding-left: 4rem;
 }
  
 /* Controls nebeneinander bringen */
-.sliderControls01 li, .sliderControls02 li, .sliderControls03 li, .sliderControls04 li {
+.sliderControls01 li, .sliderControls02 li, .sliderControls03 li, .sliderControls04 li, .sliderControls05 li {
     display: inline-block;
     padding-left: 1rem;
 }
 
 /* Controls auf einheitliche Maße bringen und die Ecken abrunden */
-.sliderControls01 label, .sliderControls02 label, .sliderControls03 label, .sliderControls04 label {
+.sliderControls01 label, .sliderControls02 label, .sliderControls03 label, .sliderControls04 label, .sliderControls05 label {
   width: 13px;
   height: 13px;
   line-height: 20px;
@@ -382,6 +400,15 @@ animation: txtFlyIn .3s linear;
 #slide14:checked ~ .sliderControls04 label[for="slide14"],
 #slide15:checked ~ .sliderControls04 label[for="slide15"],
 #slide16:checked ~ .sliderControls04 label[for="slide16"]{
+  background: white;
+  color: white;
+}
+
+.sliderControls05 label:hover,
+#slide17:checked ~ .sliderControls05 label[for="slide17"],
+#slide18:checked ~ .sliderControls05 label[for="slide18"],
+#slide19:checked ~ .sliderControls05 label[for="slide19"],
+#slide20:checked ~ .sliderControls05 label[for="slide20"]{
   background: white;
   color: white;
 }
