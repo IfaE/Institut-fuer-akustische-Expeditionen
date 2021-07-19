@@ -209,8 +209,20 @@ animation: txtFlyIn .3s linear;
 .sliderControls {
     margin: 0;
 }
+
+.sliderElements07
+.sliderElements07 figure,
+.sliderControls {
+    margin: 0;
+}
+
+.sliderElements08
+.sliderElements08 figure,
+.sliderControls {
+    margin: 0;
+}
  
-.sliderElements01:after, .sliderElements02:after, .sliderElements03:after, .sliderElements05:after, .sliderElements06:after {
+.sliderElements01:after, .sliderElements02:after, .sliderElements03:after, .sliderElements05:after, .sliderElements06:after, .sliderElements07:after, .sliderElements08:after {
     content: ".";
     display: block;
     height: .1px;
@@ -224,7 +236,7 @@ animation: txtFlyIn .3s linear;
     overflow-x: hidden;
 }
  
-.sliderElements01, .sliderElements02, .sliderElements03, .sliderElements04, .sliderElements05, .sliderElements06 {
+.sliderElements01, .sliderElements02, .sliderElements03, .sliderElements04, .sliderElements05, .sliderElements06, .sliderElements07, .sliderElements08 {
     list-style: none;
     position: relative;
     left: 0;
@@ -345,9 +357,45 @@ animation: txtFlyIn .3s linear;
 #slide24:checked ~ .sliderElements06 {
   left: -300%;
 }
+
+.sliderElements07 > li {
+  float: left;
+  width: 25%;
+  position: relative;
+}
+
+#slide26:checked ~ .sliderElements07 {
+  left: -100%;
+}
+
+#slide27:checked ~ .sliderElements07 {
+  left: -200%;
+}
+
+#slide28:checked ~ .sliderElements07 {
+  left: -300%;
+}
+
+.sliderElements08 > li {
+  float: left;
+  width: 25%;
+  position: relative;
+}
+
+#slide30:checked ~ .sliderElements08 {
+  left: -100%;
+}
+
+#slide31:checked ~ .sliderElements08 {
+  left: -200%;
+}
+
+#slide32:checked ~ .sliderElements08 {
+  left: -300%;
+}
  
 /* Bildunterschrift auf dem Bild positionieren */
-.sliderElements01 figcaption, .sliderElements02 figcaption, .sliderElements03 figcaption, .sliderElements04 figcaption, .sliderElements05 figcaption, .sliderElements06 figcaption  {
+.sliderElements01 figcaption, .sliderElements02 figcaption, .sliderElements03 figcaption, .sliderElements04 figcaption, .sliderElements05 figcaption, .sliderElements06 figcaption, .sliderElements07 figcaption, .sliderElements08 figcaption  {
     display: block;
     color: #fff;
     position: absolute;
@@ -359,7 +407,7 @@ animation: txtFlyIn .3s linear;
 }
  
 /* Bilder responsive */
-.sliderElements01 img, .sliderElements02 img, .sliderElements03 img, .sliderElements04 img, .sliderElements05 img, .sliderElements06 img {
+.sliderElements01 img, .sliderElements02 img, .sliderElements03 img, .sliderElements04 img, .sliderElements05 img, .sliderElements06 img, .sliderElements07 img, .sliderElements08 img {
     width: 100%;
     height: auto;
     padding-left: 4rem;
@@ -372,19 +420,19 @@ animation: txtFlyIn .3s linear;
 }
  
 /* mittige Ausrichtung der Controls - funktioniert im Zusammenspiel mit inline-block */
-.sliderControls01, .sliderControls02, .sliderControls03, .sliderControls04, .sliderControls05, .sliderControls06 {
+.sliderControls01, .sliderControls02, .sliderControls03, .sliderControls04, .sliderControls05, .sliderControls06, .sliderControls07, .sliderControls08 {
     text-align: center;
     padding-left: 4rem;
 }
  
 /* Controls nebeneinander bringen */
-.sliderControls01 li, .sliderControls02 li, .sliderControls03 li, .sliderControls04 li, .sliderControls05 li, .sliderControls06 li {
+.sliderControls01 li, .sliderControls02 li, .sliderControls03 li, .sliderControls04 li, .sliderControls05 li, .sliderControls06 li, .sliderControls07 li, .sliderControls08 li {
     display: inline-block;
     padding-left: 1rem;
 }
 
 /* Controls auf einheitliche Maße bringen und die Ecken abrunden */
-.sliderControls01 label, .sliderControls02 label, .sliderControls03 label, .sliderControls04 label, .sliderControls05 label, .sliderControls06 label {
+.sliderControls01 label, .sliderControls02 label, .sliderControls03 label, .sliderControls04 label, .sliderControls05 label, .sliderControls06 label, .sliderControls07 label, .sliderControls08 label {
   width: 13px;
   height: 13px;
   line-height: 20px;
@@ -448,6 +496,24 @@ animation: txtFlyIn .3s linear;
 #slide22:checked ~ .sliderControls06 label[for="slide22"],
 #slide23:checked ~ .sliderControls06 label[for="slide23"],
 #slide24:checked ~ .sliderControls06 label[for="slide24"]{
+  background: white;
+  color: white;
+}
+
+.sliderControls07 label:hover,
+#slide25:checked ~ .sliderControls07 label[for="slide25"],
+#slide26:checked ~ .sliderControls07 label[for="slide25"],
+#slide27:checked ~ .sliderControls07 label[for="slide27"],
+#slide28:checked ~ .sliderControls07 label[for="slide28"]{
+  background: white;
+  color: white;
+}
+
+.sliderControls08 label:hover,
+#slide29:checked ~ .sliderControls08 label[for="slide29"],
+#slide30:checked ~ .sliderControls08 label[for="slide30"],
+#slide31:checked ~ .sliderControls08 label[for="slide31"],
+#slide32:checked ~ .sliderControls08 label[for="slide32"]{
   background: white;
   color: white;
 }
