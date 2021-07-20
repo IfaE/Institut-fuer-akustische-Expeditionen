@@ -3,8 +3,8 @@ var map = new mapboxgl.Map({
 container: 'map', // container id
 style: 'mapbox://styles/amsho/ckq5pzuq40ygr17n2f1kraf3a', // style URL
 center: [12.360103,51.340199],
-pitch: 30,
-zoom: 10,
+pitch: 50,
+zoom: 11,
 bearing: 0,
 });
 
@@ -42,7 +42,7 @@ map.on('load', function () {
         'audio': '<source src="Kelterei Bunge.mp3"',
   'description':
   '<div class="popup-heaeder"> <strong>Kelterei Bunge</strong></div><p><audio controls> <source src="Kelterei Bunge.mp3" type="audio/mp3" style="width:300 px;height:150px;" /></p>',
-  'icon': 'music',
+  'icon': 'thisicon',
   },  
   'geometry': {
   'type': 'Point',
@@ -181,7 +181,7 @@ coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
 
 
 const sections = document.querySelectorAll("section");
-const navLi = document.querySelectorAll("nav .container1 ul li, nav .container2 ul li, nav .container3 ul li, nav .container4 ul li");
+const navLi = document.querySelectorAll("nav .container1 ul li");
 window.addEventListener("scroll", () => {
   let current = "";
   sections.forEach((section) => {
