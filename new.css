@@ -25,7 +25,7 @@
 h1 { 
   font-family: 'fengardo', 
   sans-serif; font-size: 2em; 
-  color:rgb( 7, 30, 34);
+  color:rgb(244, 237, 234);
   line-height: 1.5em; 
   scroll-behavior: smooth;
 }
@@ -43,7 +43,7 @@ h3 {
   font-size: 12pt;
   line-height: 1.5em;
   scroll-behavior: smooth;
-  color: rgb(7, 30, 34);
+  color: rgb(244, 237, 234);
   font-weight: normal;
   font-style: normal;
 }
@@ -54,7 +54,7 @@ h4 {
   line-height: 1.5em; 
   margin-bottom: 1rem;
   scroll-behavior: smooth;
-  color: rgb(0, 56, 68);
+  color: rgb(244, 237, 234);
 }
 
 * {
@@ -560,7 +560,7 @@ section {
 
 @-moz-document url-prefix() {
   .section-container {
-    background: rgba( 244, 237, 234, 0.7);
+    background: rgba(0, 38, 66, 0.7);
   }
 }
 
