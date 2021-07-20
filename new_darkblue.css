@@ -1,0 +1,710 @@
+
+
+@font-face {
+  font-family: 'Minipax-Medium', serif;
+  src: url('font/Minipax-Medium.eot');
+  src: url('font/Minipax-Medium.eot') format('embedded-opentype'),
+       url('font/Minipax-Medium.woff') format('woff'),
+       url('font/Minipax-Medium.ttf') format('truetype'),
+       url('font/Minipax-Medium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+      }
+      
+  @font-face {
+  font-family: 'fengardo';
+  src: url('font/fengardoneue_regular-webfont.eot');
+  src: url('font/fengardoneue_regular-webfont.eot') format('embedded-opentype'),
+       url('font/fengardoneue_regular-webfont.woff') format('woff'),
+       url('font/fengardoneue_regular-webfont.ttf') format('truetype'),
+       url('font/fengardoneue_regular-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}    
+
+h1 { 
+  font-family: 'fengardo', 
+  sans-serif; font-size: 2em; 
+  color:white;
+  line-height: 1.5em; 
+  scroll-behavior: smooth;
+}
+
+h2 {
+  font-family: 'fengardo', 
+  sans-serif; font-size: 0.9em; 
+  line-height: 1.5em; 
+  margin-bottom: 1rem;
+  scroll-behavior: smooth;
+}
+
+h3 {
+  font-family: 'Minipax-Medium';
+  font-size: 12pt;
+  line-height: 1.5em;
+  scroll-behavior: smooth;
+  color: white;
+  font-weight: normal;
+  font-style: normal;
+}
+
+h4 {
+  font-family: 'fengardo', 
+  sans-serif; font-size: 0.9em; 
+  line-height: 1.5em; 
+  margin-bottom: 1rem;
+  scroll-behavior: smooth;
+  color: rgb(245, 251, 239);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+background-color: rgb( 0, 56, 68);
+margin:0rem;
+/*! background-image: linear-gradient(to top, white 0%, black 50%); */
+/*! \{\ width: 100%; */
+/*! height: 40vh; */
+/*! background-size: 200% 100%; */
+/*! background-image: repeating-linear-gradient( -45deg, hsl(215,30%,60%) 0%, hsl(120,30%,90%) 15%, hsl(30,50%,90%) 30%, hsl(215,30%,60%) 45% ); */
+/*! animation: diagonal alternate 30s infinite; */
+/*! \@keyframes\\\ diagonal\\\ \\\{\\\ 0\\\%\\\ \\\{background-position: 0% 50%\} 100% {background-position: 100% 50%} \}; */
+}
+
+.background {
+  height: 100%;
+  width: 100%;
+  background-size: 100%;
+  position: fixed;
+  z-index: -200;
+}
+.background path {
+  position: absolute;
+  z-index: -1;
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 690 1380;
+  animation: strokeAni 60s infinite ease-in-out;
+}
+
+
+ 
+@keyframes strokeAni {
+	0% {
+		stroke-dashoffset: 690;
+    stroke:rgb( 101, 35, 49);
+	}
+  50% {
+		stroke-dashoffset: 0;
+    stroke:rgb(239, 131, 84);
+	}
+	100% {
+		stroke-dashoffset: 690;
+    stroke:rgb(101, 35, 49);
+	}
+}
+.flyinTxtCont {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding-bottom: 10%;
+  margin-left: 8%;
+  /*! z-index: 101; */
+}
+.flyinTxtCont {
+  padding-bottom: 5rem;
+  animation: Txtbeat 1s infinite;
+  animation-delay: 3s;
+  /*! z-index: 101; */
+}
+
+.flyIn {
+  color:rgb(244, 237, 234);
+  font-family:'fengardo';
+  text-transform:none;
+  line-height:1.2em;
+  position:relative;
+text-shadow: 2px 2px 40px rgba( 0, 56, 68, 1);
+}
+
+.lineOne {
+transition-delay:.30s; 
+transition:.10s ease in;
+animation: txtFlyIn .3s linear;
+}
+.lineTwo {
+  transition-delay:.30s; 
+  transition:.11s ease in;
+  animation: txtFlyIn .2s linear;
+}
+.lineThree {
+  transition-delay:.9s; 
+  transition:.6s ease in;
+  animation: txtFlyIn .15s linear;
+}
+.lineFour {
+  transition-delay:.12s; 
+  transition:.8s ease in;
+  animation: txtFlyIn .13s linear;
+}
+
+
+.lineOne, .lineTwo, .lineThree, .lineFour {
+  font-size:3rem;
+  font-weight: none;
+  letter-spacing: 3px;
+  text-align: center;
+  z-index: 1000;
+}
+
+@keyframes fadeIn{
+  0% { opacity:0;}
+  100% { opacity:1;}
+}
+@keyframes txtFlyIn{
+  0% { transform:translateX(-100%); }
+  100% { transform:translateX(0%); }
+}
+
+
+.cssSlider {
+  width: 400%;
+}
+
+.slider {
+  overflow-x: hidden;
+}
+
+.sliderElements01
+.sliderElements01 figure,
+.sliderControls {
+    margin: 0;
+}
+
+.sliderElements02
+.sliderElements02 figure,
+.sliderControls {
+    margin: 0;
+}
+
+.sliderElements03
+.sliderElements03 figure,
+.sliderControls {
+    margin: 0;
+}
+
+.sliderElements05
+.sliderElements05 figure,
+.sliderControls {
+    margin: 0;
+}
+
+.sliderElements06
+.sliderElements06 figure,
+.sliderControls {
+    margin: 0;
+}
+
+.sliderElements07
+.sliderElements07 figure,
+.sliderControls {
+    margin: 0;
+}
+
+.sliderElements08
+.sliderElements08 figure,
+.sliderControls {
+    margin: 0;
+}
+ 
+.sliderElements01:after, .sliderElements02:after, .sliderElements03:after, .sliderElements05:after, .sliderElements06:after, .sliderElements07:after, .sliderElements08:after {
+    content: ".";
+    display: block;
+    height: .1px;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+    overflow: hidden;
+}
+ 
+.cssSlider {
+    overflow-x: hidden;
+}
+ 
+.sliderElements01, .sliderElements02, .sliderElements03, .sliderElements04, .sliderElements05, .sliderElements06, .sliderElements07, .sliderElements08 {
+    list-style: none;
+    position: relative;
+    left: 0;
+    width: 400%;
+    margin-bottom: .8em;
+    padding: 0;
+    -webkit-transition: left .8s ease-in-out;
+    -moz-transition: left .8s ease-in-out;
+    -o-transition: left .8s ease-in-out;
+    transition: left .8s ease-in-out;
+}
+
+ 
+.sliderElements01 > li {
+    float: left;
+    width: 25%;
+    position: relative;
+}
+ 
+#slide02:checked ~ .sliderElements01 {
+    left: -100%;
+}
+ 
+#slide03:checked ~ .sliderElements01 {
+    left: -200%;
+}
+ 
+#slide04:checked ~ .sliderElements01 {
+    left: -300%;
+}
+
+.sliderElements02 > li {
+  float: left;
+  width: 25%;
+  position: relative;
+}
+
+#slide06:checked ~ .sliderElements02 {
+  left: -100%;
+}
+
+#slide07:checked ~ .sliderElements02 {
+  left: -200%;
+}
+
+#slide08:checked ~ .sliderElements02 {
+  left: -300%;
+}
+
+.sliderElements03 > li {
+  float: left;
+  width: 25%;
+  position: relative;
+}
+
+#slide10:checked ~ .sliderElements03 {
+  left: -100%;
+}
+
+#slide11:checked ~ .sliderElements03 {
+  left: -200%;
+}
+
+#slide12:checked ~ .sliderElements03 {
+  left: -300%;
+}
+
+.sliderElements04 > li {
+  float: left;
+  width: 25%;
+  position: relative;
+}
+
+#slide14:checked ~ .sliderElements04 {
+  left: -100%;
+}
+
+#slide15:checked ~ .sliderElements04 {
+  left: -200%;
+}
+
+#slide16:checked ~ .sliderElements04 {
+  left: -300%;
+}
+
+.sliderElements05 > li {
+  float: left;
+  width: 25%;
+  position: relative;
+}
+
+#slide18:checked ~ .sliderElements05 {
+  left: -100%;
+}
+
+#slide19:checked ~ .sliderElements05 {
+  left: -200%;
+}
+
+#slide20:checked ~ .sliderElements05 {
+  left: -300%;
+}
+
+.sliderElements06 > li {
+  float: left;
+  width: 25%;
+  position: relative;
+}
+
+#slide22:checked ~ .sliderElements06 {
+  left: -100%;
+}
+
+#slide23:checked ~ .sliderElements06 {
+  left: -200%;
+}
+
+#slide24:checked ~ .sliderElements06 {
+  left: -300%;
+}
+
+.sliderElements07 > li {
+  float: left;
+  width: 25%;
+  position: relative;
+}
+
+#slide26:checked ~ .sliderElements07 {
+  left: -100%;
+}
+
+#slide27:checked ~ .sliderElements07 {
+  left: -200%;
+}
+
+#slide28:checked ~ .sliderElements07 {
+  left: -300%;
+}
+
+.sliderElements08 > li {
+  float: left;
+  width: 25%;
+  position: relative;
+}
+
+#slide30:checked ~ .sliderElements08 {
+  left: -100%;
+}
+
+#slide31:checked ~ .sliderElements08 {
+  left: -200%;
+}
+
+#slide32:checked ~ .sliderElements08 {
+  left: -300%;
+}
+ 
+/* Bildunterschrift auf dem Bild positionieren */
+.sliderElements01 figcaption, .sliderElements02 figcaption, .sliderElements03 figcaption, .sliderElements04 figcaption, .sliderElements05 figcaption, .sliderElements06 figcaption, .sliderElements07 figcaption, .sliderElements08 figcaption  {
+    display: block;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 1em;
+    padding: .4em;
+    background: rgba(0,0,0,.5);
+    padding-left: 4rem;
+}
+ 
+/* Bilder responsive */
+.sliderElements01 img, .sliderElements02 img, .sliderElements03 img, .sliderElements04 img, .sliderElements05 img, .sliderElements06 img, .sliderElements07 img, .sliderElements08 img {
+    width: 100%;
+    height: auto;
+    padding-left: 4rem;
+}
+ 
+/* inputs aus dem Blickfeld schieben */
+.cssSlider input {
+    position: absolute;
+    left: -99999px;
+}
+ 
+/* mittige Ausrichtung der Controls - funktioniert im Zusammenspiel mit inline-block */
+.sliderControls01, .sliderControls02, .sliderControls03, .sliderControls04, .sliderControls05, .sliderControls06, .sliderControls07, .sliderControls08 {
+    text-align: center;
+    padding-left: 4rem;
+}
+ 
+/* Controls nebeneinander bringen */
+.sliderControls01 li, .sliderControls02 li, .sliderControls03 li, .sliderControls04 li, .sliderControls05 li, .sliderControls06 li, .sliderControls07 li, .sliderControls08 li {
+    display: inline-block;
+    padding-left: 1rem;
+}
+
+/* Controls auf einheitliche Maße bringen und die Ecken abrunden */
+.sliderControls01 label, .sliderControls02 label, .sliderControls03 label, .sliderControls04 label, .sliderControls05 label, .sliderControls06 label, .sliderControls07 label, .sliderControls08 label {
+  width: 13px;
+  height: 13px;
+  line-height: 20px;
+  font-size: 0.1rem;
+  text-align: center;
+  border-radius: 50%;
+  display: block;
+  cursor: pointer;
+  background: rgb(146, 146, 146);
+  color: rgb(146, 146, 146);
+}
+ 
+/* Attributselektor und indirekter Nachfahrkombinator zum ansteuern der labels */
+.sliderControls01 label:hover,
+#slide01:checked ~ .sliderControls01 label[for="slide01"],
+#slide02:checked ~ .sliderControls01 label[for="slide02"],
+#slide03:checked ~ .sliderControls01 label[for="slide03"],
+#slide04:checked ~ .sliderControls01 label[for="slide04"]{
+    background: rgb(101, 35, 49);
+    color: rgb(101, 35, 49);
+}
+
+.sliderControls02 label:hover,
+#slide05:checked ~ .sliderControls02 label[for="slide05"],
+#slide06:checked ~ .sliderControls02 label[for="slide06"],
+#slide07:checked ~ .sliderControls02 label[for="slide07"],
+#slide08:checked ~ .sliderControls02 label[for="slide08"]{
+  background: white;
+  color: white;
+}
+
+.sliderControls03 label:hover,
+#slide09:checked ~ .sliderControls03 label[for="slide09"],
+#slide10:checked ~ .sliderControls03 label[for="slide10"],
+#slide11:checked ~ .sliderControls03 label[for="slide11"],
+#slide12:checked ~ .sliderControls03 label[for="slide12"]{
+  background: white;
+  color: white;
+}
+
+.sliderControls04 label:hover,
+#slide13:checked ~ .sliderControls04 label[for="slide13"],
+#slide14:checked ~ .sliderControls04 label[for="slide14"],
+#slide15:checked ~ .sliderControls04 label[for="slide15"],
+#slide16:checked ~ .sliderControls04 label[for="slide16"]{
+  background: white;
+  color: white;
+}
+
+.sliderControls05 label:hover,
+#slide17:checked ~ .sliderControls05 label[for="slide17"],
+#slide18:checked ~ .sliderControls05 label[for="slide18"],
+#slide19:checked ~ .sliderControls05 label[for="slide19"],
+#slide20:checked ~ .sliderControls05 label[for="slide20"]{
+  background: white;
+  color: white;
+}
+
+.sliderControls06 label:hover,
+#slide21:checked ~ .sliderControls06 label[for="slide21"],
+#slide22:checked ~ .sliderControls06 label[for="slide22"],
+#slide23:checked ~ .sliderControls06 label[for="slide23"],
+#slide24:checked ~ .sliderControls06 label[for="slide24"]{
+  background: white;
+  color: white;
+}
+
+.sliderControls07 label:hover,
+#slide25:checked ~ .sliderControls07 label[for="slide25"],
+#slide26:checked ~ .sliderControls07 label[for="slide25"],
+#slide27:checked ~ .sliderControls07 label[for="slide27"],
+#slide28:checked ~ .sliderControls07 label[for="slide28"]{
+  background: white;
+  color: white;
+}
+
+.sliderControls08 label:hover,
+#slide29:checked ~ .sliderControls08 label[for="slide29"],
+#slide30:checked ~ .sliderControls08 label[for="slide30"],
+#slide31:checked ~ .sliderControls08 label[for="slide31"],
+#slide32:checked ~ .sliderControls08 label[for="slide32"]{
+  background: white;
+  color: white;
+}
+
+section {
+  /* height: 100vh; */
+  width: 85%;
+  display: flex;
+  margin-left: 8%;
+  align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  /*margin-top: 10rem;*/
+  /* padding: 2rem;*/
+}
+
+@media (max-width: 768px) {
+  .section {
+    grid-gap: none;
+    padding: none!important;
+  }
+} 
+
+
+.section-container {
+  justify-content: center;
+  background: rgba(40, 40, 40, 0.1);
+  padding: 1rem;
+  width: 200%;
+  backdrop-filter: blur(3px);
+}
+
+@-moz-document url-prefix() {
+  .section-container {
+    background: rgb( 0, 56, 68, 0.7);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .section-container {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: none;
+  }
+} 
+
+#home {
+  background-color:#000000;
+}
+#about {
+  background:none;
+  margin-bottom: 5rem;
+  max-width: 600px;
+    /*padding-top: 5rem;*/
+}
+
+#impressum {
+  width: 45%;
+    display: block;
+    position: relative;
+    margin-left: 8%;
+    margin-top: 20%;
+    padding-top: 0;
+
+}
+#back {
+  float: right;
+}
+
+#footer {
+  background-color:#000000;
+}
+
+
+#contact {
+margin-top: 5rem;
+}
+
+.icon {
+  color: white;
+  width: 2rem;
+  display: inline-block;
+  position: relative;
+}
+
+
+#map { display: block;
+  position: relative;
+  width: 100%;
+  height: 100vh; }
+
+
+
+  #nav1 {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+  }
+/* The Simple Menu */
+.container1 {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0;
+  top: 0;
+  position: fixed;
+  background: linear-gradient(to bottom,rgb(0, 56, 68) 30%, rgba(0,0,0,0) 900%);
+  /*! z-index: 50; */
+}
+
+nav .container1 ul li {
+display: inline-block;
+}
+nav .container1 ul li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 20px;
+  color: rgb(244, 237, 234);
+}
+nav .container1 ul li.active {
+  background-color:transparent;
+  transition: 0.3s ease background-color;
+}
+nav .container1 ul li.active a {
+  color: rgb( 244, 237, 234);
+  text-shadow: 2px 1px 30px rgb(244, 237, 234);
+}
+
+
+
+/* dropdown */
+.dropdown ul{ 
+  display: inline;
+  }
+
+.dropdown li > ul { 
+  background:black; 
+  text-align: justify;
+  display:none;
+  position:absolute;
+  z-index:1999;
+}
+
+.dropdown li > ul li{ display:block; 
+  width: 100%!important;
+}
+
+.dropdown li:hover  > ul{
+  display:block;
+}
+
+
+
+
+
+  @media (max-width: 768px) {
+    .cssSlider {
+      display: none!important;
+    }
+  } 
+
+  @media (max-width: 768px) {
+    .h3 {
+      font-size: 0.9em;
+    }
+  } 
+
+  @media (max-width: 768px) {
+    .background {
+      width: 250%;
+      left:-93%;
+    }
+  }  
+
+ 
+  
+
+:root {
+  --plyr-audio-controls-background: transparent;
+  --plyr-audio-control-color: white;
+  --plyr-audio-control-background-hover: transparent;
+  --plyr-color-main: transparent;
+  --plyr-font-family: "fengardo";
+  }
