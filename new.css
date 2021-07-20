@@ -25,7 +25,7 @@
 h1 { 
   font-family: 'fengardo', 
   sans-serif; font-size: 2em; 
-  color:white;
+  color:rgb( 7, 30, 34);
   line-height: 1.5em; 
   scroll-behavior: smooth;
 }
@@ -43,7 +43,7 @@ h3 {
   font-size: 12pt;
   line-height: 1.5em;
   scroll-behavior: smooth;
-  color: white;
+  color: rgb(7, 30, 34);
   font-weight: normal;
   font-style: normal;
 }
@@ -54,7 +54,7 @@ h4 {
   line-height: 1.5em; 
   margin-bottom: 1rem;
   scroll-behavior: smooth;
-  color: rgb(244, 237, 234);
+  color: rgb(0, 56, 68);
 }
 
 * {
@@ -89,15 +89,15 @@ margin:0rem
 @keyframes strokeAni {
 	0% {
 		stroke-dashoffset: 690;
-    stroke:rgb(101, 35, 49);
+    stroke:rgb(73, 144, 162);
 	}
   50% {
 		stroke-dashoffset: 0;
-    stroke:rgb(73, 144, 162);
+    stroke:rgb(101, 35, 49);
 	}
 	100% {
 		stroke-dashoffset: 690;
-    stroke:rgb(101, 35, 49);
+    stroke:rgb(73, 144, 162);
 	}
 }
 .flyinTxtCont {
@@ -536,6 +536,8 @@ section {
   padding-bottom: 5rem;
   /*margin-top: 10rem;*/
   /* padding: 2rem;*/
+  /*! border-bottom-right-radius: revert; */
+  /*! border-radius: 50%; */
 }
 
 @media (max-width: 768px) {
@@ -552,11 +554,13 @@ section {
   padding: 1rem;
   width: 200%;
   backdrop-filter: blur(3px);
+  /*! border-style: inset; */
+  /*! border-color: rgb( 0, 56, 68); */
 }
 
 @-moz-document url-prefix() {
   .section-container {
-    background: rgba(0, 38, 66, 0.7);
+    background: rgba( 244, 237, 234, 0.7);
   }
 }
 
@@ -565,6 +569,7 @@ section {
   .section-container {
     background: rgba(0, 38, 66, 0.7);
     backdrop-filter: none;
+    border-radius: 10%;
   }
 } 
 
@@ -599,10 +604,12 @@ margin-top: 5rem;
 }
 
 .icon {
-  color: white;
+  /*! color: rgb(101, 35, 49); */
   width: 2rem;
   display: inline-block;
   position: relative;
+  /*! background: rgb(0, 56, 68); */
+  /*! color: rgb(0, 56, 68); */
 }
 
 
@@ -703,7 +710,7 @@ nav .container1 ul li.active a {
 
 :root {
   --plyr-audio-controls-background: transparent;
-  --plyr-audio-control-color: white;
+  --plyr-audio-control-color: rgb(0, 56, 68);
   --plyr-audio-control-background-hover: transparent;
   --plyr-color-main: transparent;
   --plyr-font-family: "fengardo";
