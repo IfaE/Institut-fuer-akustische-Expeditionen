@@ -20,9 +20,13 @@ window.addEventListener("scroll", () => {
     const sectionHeight = section.clientHeight;
     if (pageYOffset >= sectionTop - sectionHeight / 3) {
       current = section.getAttribute("id");
+      $(this).parents('li').find('> a').addClass("active");
+
     }
   });
 
+
+  
   navLi.forEach((li) => {
     li.classList.remove("active");
     if (li.classList.contains(current)) {
@@ -30,6 +34,7 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
 
 // AUDIO PLAYER
 document.addEventListener('DOMContentLoaded', () => {
