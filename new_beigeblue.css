@@ -25,7 +25,7 @@
 h1 { 
   font-family: 'fengardo', 
   sans-serif; font-size: 2em; 
-  color:rgb(255 94 196);
+  color:rgb(244, 237, 234);
   line-height: 1.5em; 
   scroll-behavior: smooth;
 }
@@ -43,7 +43,7 @@ h3 {
   font-size: 12pt;
   line-height: 1.5em;
   scroll-behavior: smooth;
-  color: rgb(255 255 255);
+  color: rgb(244, 237, 234);
   font-weight: normal;
   font-style: normal;
 }
@@ -54,7 +54,7 @@ h4 {
   line-height: 1.5em; 
   margin-bottom: 1rem;
   scroll-behavior: smooth;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgb(244, 237, 234);
 }
 
 * {
@@ -64,7 +64,7 @@ h4 {
 }
 
 body {
-background-color: rgb(0 8 49);
+background-color: rgb(244, 237, 234);
 margin:0rem
 }
 
@@ -89,15 +89,15 @@ margin:0rem
 @keyframes strokeAni {
 	0% {
 		stroke-dashoffset: 690;
-    stroke:rgb(242, 0, 0);
+    stroke:rgb(73, 144, 162);
 	}
   50% {
 		stroke-dashoffset: 0;
-    stroke:rgb(242, 0, 0);
+    stroke:rgb(101, 35, 49);
 	}
 	100% {
 		stroke-dashoffset: 690;
-    stroke:rgb(242, 0, 0);
+    stroke:rgb(73, 144, 162);
 	}
 }
 .flyinTxtCont {
@@ -127,12 +127,12 @@ margin:0rem
 }
 
 .flyIn {
-  color:rgb(255 255 255);
+  color:rgb(0, 38, 66);
   font-family:'fengardo';
   text-transform:none;
   line-height:1.2em;
   position:relative;
-text-shadow: 2px 2px 40px rgba(0 8 49);
+text-shadow: 2px 2px 40px rgba(255, 255, 255, 1);
 }
 
 .lineOne {
@@ -449,8 +449,8 @@ animation: txtFlyIn .3s linear;
   border-radius: 50%;
   display: block;
   cursor: pointer;
-  background: rgb(255 255 255);
-  color: rgb(255 255 255);
+  background: rgb(146, 146, 146);
+  color: rgb(146, 146, 146);
 }
  
 /* Attributselektor und indirekter Nachfahrkombinator zum ansteuern der labels */
@@ -459,8 +459,8 @@ animation: txtFlyIn .3s linear;
 #slide02:checked ~ .sliderControls01 label[for="slide02"],
 #slide03:checked ~ .sliderControls01 label[for="slide03"],
 #slide04:checked ~ .sliderControls01 label[for="slide04"]{
-    background: rgb(255, 94, 196);
-    color: rgb(255, 94, 196);
+    background: rgb(73	144	162);
+    color: rgb(73,	144,	162);
 }
 
 .sliderControls02 label:hover,
@@ -468,8 +468,8 @@ animation: txtFlyIn .3s linear;
 #slide06:checked ~ .sliderControls02 label[for="slide06"],
 #slide07:checked ~ .sliderControls02 label[for="slide07"],
 #slide08:checked ~ .sliderControls02 label[for="slide08"]{
-  background: rgb(255, 94, 196);
-  color: rgb(255, 94, 196);
+  background: rgb(73	144	162);
+  color: rgb(73,	144,	162);
 }
 
 .sliderControls03 label:hover,
@@ -477,8 +477,8 @@ animation: txtFlyIn .3s linear;
 #slide10:checked ~ .sliderControls03 label[for="slide10"],
 #slide11:checked ~ .sliderControls03 label[for="slide11"],
 #slide12:checked ~ .sliderControls03 label[for="slide12"]{
-  background: rgb(255, 94, 196);
-  color: rgb(255, 94, 196);
+  background: rgb(73	144	162);
+  color: rgb(73,	144,	162);
 }
 
 .sliderControls04 label:hover,
@@ -486,8 +486,8 @@ animation: txtFlyIn .3s linear;
 #slide14:checked ~ .sliderControls04 label[for="slide14"],
 #slide15:checked ~ .sliderControls04 label[for="slide15"],
 #slide16:checked ~ .sliderControls04 label[for="slide16"]{
-  background: rgb(255, 94, 196);
-  color: rgb(255, 94, 196);
+  background: rgb(73	144	162);
+  color: rgb(73,	144,	162);
 }
 
 .sliderControls05 label:hover,
@@ -495,8 +495,8 @@ animation: txtFlyIn .3s linear;
 #slide18:checked ~ .sliderControls05 label[for="slide18"],
 #slide19:checked ~ .sliderControls05 label[for="slide19"],
 #slide20:checked ~ .sliderControls05 label[for="slide20"]{
-  background: rgb(255, 94, 196);
-  color: rgb(255, 94, 196);
+  background: rgb(73	144	162);
+  color: rgb(73,	144,	162);
 }
 
 .sliderControls06 label:hover,
@@ -504,8 +504,8 @@ animation: txtFlyIn .3s linear;
 #slide22:checked ~ .sliderControls06 label[for="slide22"],
 #slide23:checked ~ .sliderControls06 label[for="slide23"],
 #slide24:checked ~ .sliderControls06 label[for="slide24"]{
-  background: rgb(255, 94, 196);
-  color: rgb(255, 94, 196);
+  background: rgb(73	144	162);
+  color: rgb(73,	144,	162);
 }
 
 .sliderControls07 label:hover,
@@ -513,8 +513,8 @@ animation: txtFlyIn .3s linear;
 #slide26:checked ~ .sliderControls07 label[for="slide25"],
 #slide27:checked ~ .sliderControls07 label[for="slide27"],
 #slide28:checked ~ .sliderControls07 label[for="slide28"]{
-  background: rgb(255, 94, 196);
-  color: rgb(255, 94, 196);
+  background: rgb(73	144	162);
+  color: rgb(73,	144,	162);
 }
 
 .sliderControls08 label:hover,
@@ -522,8 +522,8 @@ animation: txtFlyIn .3s linear;
 #slide30:checked ~ .sliderControls08 label[for="slide30"],
 #slide31:checked ~ .sliderControls08 label[for="slide31"],
 #slide32:checked ~ .sliderControls08 label[for="slide32"]{
-    background: rgb(255, 94, 196);
-    color: rgb(255, 94, 196);
+  background: rgb(73	144	162);
+  color: rgb(73,	144,	162);
 }
 
 section {
@@ -550,7 +550,7 @@ section {
 
 .section-container {
   justify-content: center;
-  background: rgba(0 , 8, 49, 0.7);
+  background: rgba(0, 38, 66, 0.7);
   padding: 1rem;
   width: 200%;
   backdrop-filter: blur(3px);
@@ -560,14 +560,14 @@ section {
 
 @-moz-document url-prefix() {
   .section-container {
-    background: rgba(0 , 8, 49, 0.7);
+    background: rgba(0, 38, 66, 0.7);
   }
 }
 
 
 @media (max-width: 768px) {
   .section-container {
-    background: rgba(0 , 8, 49, 0.7);
+    background: rgba(0, 38, 66, 0.7);
     backdrop-filter: none;
     border-radius: 10%;
   }
@@ -633,7 +633,7 @@ margin-top: 5rem;
   padding: 0;
   top: 0;
   position: fixed;
-  background: linear-gradient(to bottom,rgb(0 8 49) 30%, rgba(0,0,0,0) 900%);
+  background: linear-gradient(to bottom,rgb(244, 237, 234) 30%, rgba(0,0,0,0) 900%);
   /*! z-index: 50; */
 }
 @media (max-width: 768px) {
@@ -649,14 +649,14 @@ nav .container1 ul li a {
   display: inline-block;
   text-decoration: none;
   padding: 10px 20px;
-  color: rgb(255 255 255);
+  color: rgb(0, 38, 66);
 }
 nav .container1 ul li.active {
   background-color:transparent;
   transition: 0.3s ease background-color;
 }
 nav .container1 ul li.active a {
-  color: rgb(255 94 196);
+  color: rgb(73 144 162);
 }
 
 
@@ -667,7 +667,7 @@ nav .container1 ul li.active a {
   }
 
 .dropdown li > ul { 
-  background:rgb(0 8 49); 
+  background:rgb(244, 237, 234); 
   text-align: justify;
   display:none;
   position:absolute;
@@ -710,18 +710,11 @@ nav .container1 ul li.active a {
 
 :root {
   --plyr-audio-controls-background: transparent;
-  --plyr-audio-control-color: rgb(255 94 196);
-  --plyr-audio-control-color-hover: rgb(242 0 0 );
-  --plyr-menu-background: rgb(255 94 196);
-  --plyr-menu-color: rgb(0 0 0 );
-  --plyr-menu-item-arrow-color: rgb(0 0 0 );
-  --plyr-menu-border-color: rgb(0 0 0 );
-  --plyr-audio-progress-buffered-background: rgb(242 0 0 );
-  --plyr-progress-loading-background: rgb(255 94 196);
-  --plyr-audio-progress-buffered-background: rgb(255 94 196);
-  --plyr-range-fill-background: rgb(242 0 0);
-  --plyr-tooltip-color: rgb(255 255 255);
+  --plyr-audio-control-color: rgb(0, 56, 68);
   --plyr-audio-control-background-hover: transparent;
   --plyr-color-main: transparent;
   --plyr-font-family: "fengardo";
   }
+
+
+  
